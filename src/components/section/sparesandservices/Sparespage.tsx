@@ -175,7 +175,6 @@ const matchSteps = [
    2. SMALL HELPERS
    ========================================================= */
 const wrap = " px-5 md:px-8";
-const DROP = "M12 2.5s6 6.2 6 10.5a6 6 0 1 1-12 0C6 8.7 12 2.5 12 2.5z";
 const ARROW = "M5 12h14M13 6l6 6-6 6";
 const CHAT = "M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z";
 
@@ -354,7 +353,7 @@ function CategorySection({
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
           {/* Photo */}
           <div className={reversed ? "lg:order-2" : ""}>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-xs bg-gradient-to-br from-(--blue) to-(--primary) shadow-xl shadow-cyan-900/10">
+            <div className="relative aspect-4/3 overflow-hidden rounded-xs bg-linear-to-br from-(--blue) to-(--primary) shadow-xl shadow-cyan-900/10">
               {c.image ? (
                 <img
                   src={c.image}

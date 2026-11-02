@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import RoImg from '../assets/navbar/Ro-img.jpeg'
 import { Link } from 'react-router'
-import Home from '../pages/Home'
 import Logo from '../assets/logo.png'
 import { BsWhatsapp } from 'react-icons/bs'
 import { MdWifiCalling3 } from "react-icons/md";
@@ -182,7 +181,7 @@ export default function Navbar () {
            py-2  backdrop-blur-md'
         >
           {/* Logo */}
-          <Link to={'/'} element={<Home />}>
+          <Link to={'/'}>
             <img src={Logo} alt='' className='w-32.5' />
           </Link>
 
@@ -363,14 +362,14 @@ export default function Navbar () {
                 rel='noopener noreferrer'
                 className='flex items-center justify-center gap-2 rounded-full border border-black/15 py-2.5 text-sm font-medium text-black hover:bg-black/10'
               >
-                <Icon d={ICONS.chat} className='h-4 w-4 text-emerald-400' />
+                <BsWhatsapp />
                 WhatsApp
               </a>
               <a
                 href={`tel:${PHONE}`}
                 className='flex items-center justify-center gap-2 rounded-full border border-black/15 py-2.5 text-sm font-medium text-black hover:bg-black/10'
               >
-                <Icon d={ICONS.phone} className='h-4 w-4 text-cyan-300' />
+                <MdWifiCalling3 />
                 Call Now
               </a>
             </div>

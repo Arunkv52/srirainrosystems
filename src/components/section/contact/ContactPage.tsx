@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { FormProvider, useForm, useFormContext } from "react-hook-form";
 import type { ReactNode } from "react";
 
@@ -502,7 +502,7 @@ function Hero() {
                   <span className="block text-xs font-semibold uppercase tracking-wider text-slate-500">
                     {q.label}
                   </span>
-                  <span className="mt-0.5 block break-words text-base font-semibold text-(--primary)">
+                  <span className="mt-0.5 block wrap-break-word text-base font-semibold text-(--primary)">
                     {q.value}
                   </span>
                 </span>
@@ -705,7 +705,7 @@ function MapSection() {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen
-            className="block h-[360px] w-full sm:h-[460px]"
+            className="block h-90 w-full sm:h-115"
           />
           <div className="flex flex-col gap-4 bg-slate-50 p-5 sm:flex-row sm:items-center sm:justify-between sm:px-8">
             <div className="flex items-start gap-3">

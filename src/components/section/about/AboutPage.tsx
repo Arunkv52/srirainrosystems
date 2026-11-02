@@ -11,7 +11,6 @@ const PHONE_HREF = 'tel:+919999999999'
 //   import AboutImg from "../assets/about/about.jpg";
 //   const ABOUT_IMAGE = AboutImg;
 // While this is empty, a blue gradient with a water drop is shown.
-const ABOUT_IMAGE = ''
 
 /* ---- About section ---- */
 const aboutParagraphs = [
@@ -154,9 +153,7 @@ function Icon ({ d, className = 'h-6 w-6' }: { d: string; className?: string }) 
   )
 }
 
-const ARROW = 'M5 12h14M13 6l6 6-6 6'
-const CHECK = 'M5 12.5l4.5 4.5L19 7.5'
-const DROP = 'M12 2.5s6 6.2 6 10.5a6 6 0 1 1-12 0C6 8.7 12 2.5 12 2.5z'
+
 
 function Stars ({ count }: { count: number }) {
   return (
@@ -243,7 +240,7 @@ function AboutIntro () {
         <div className='grid items-center gap-12 lg:grid-cols-2 lg:gap-20'>
           {/* Left: picture with a floating card */}
           <div className='relative'>
-            <div className='relative aspect-[4/3] overflow-hidden rounded-sm bg-gradient-to-br from-(--blue) to-(--primary) lg:aspect-[5/4]'>
+            <div className='relative aspect-4/3 overflow-hidden rounded-sm bg-linear-to-br from-(--blue) to-(--primary) lg:aspect-5/4'>
               <img
                 src={AbtImg}
                 alt={`The ${BRAND} team at work`}
@@ -252,7 +249,7 @@ function AboutIntro () {
               />
             </div>
 
-            <div className='absolute -bottom-6 right-4 max-w-[17rem] rounded-2xl bg-white p-5 shadow-xl ring-1 ring-slate-100 sm:right-8'>
+            <div className='absolute -bottom-6 right-4 max-w-68 rounded-2xl bg-white p-5 shadow-xl ring-1 ring-slate-100 sm:right-8'>
               <p className='text-sm font-semibold text-(--primary)'>
                 Homes, businesses and industry
               </p>
@@ -284,9 +281,7 @@ function AboutIntro () {
                   key={p}
                   className='flex items-center gap-3 text-sm font-medium text-slate-700'
                 >
-                  <span className='grid h-6 w-6 shrink-0 place-items-center rounded-full bg-cyan-100 text-cyan-700'>
-                    <Icon d={CHECK} className='h-3.5 w-3.5' />
-                  </span>
+                  
                   {p}
                 </li>
               ))}
@@ -518,7 +513,7 @@ function CtaBand () {
                 className='inline-flex items-center gap-2 rounded-full bg-white/90 px-7 py-3.5 text-sm font-semibold text-(--primary) transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300'
               >
                 Get a quote
-                <Icon d={ARROW} className='h-4 w-4' />
+               
               </a>
               <a
                 href={PHONE_HREF}

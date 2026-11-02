@@ -1,7 +1,5 @@
 import { Link } from "react-router"
 import Logo from '../assets/logo.png'
-import Home from "../pages/Home"
-
 
 /* ---------- Edit these ---------- */
 const BRAND = 'Sri Rain Ro Systems'
@@ -122,9 +120,9 @@ export default function Footer () {
           <Icon paths={[ICONS.drop]} className='h-12 w-12 text-cyan-300' />
           <span className='text-3xl font-bold tracking-tight'>{BRAND}</span>
         </a> */}
-        <Link to={'/'} element={<Home />}>
-            <img src={Logo} alt='' className='w-[200px] bg-white'/>
-          </Link>
+        <Link to={'/'}>
+          <img src={Logo} alt='' className='w-50 bg-white' />
+        </Link>
 
         {/* Main row */}
         <div className='mt-16 md:grid grid md:grid-cols-[4fr_1fr_1fr] grid-cols-1 md:gap-14 gap-8 md:mt-2'>
@@ -170,7 +168,7 @@ export default function Footer () {
                   >
                     <Icon
                       paths={c.paths}
-                      className='h-[18px] w-[18px] shrink-0'
+                      className='h-4.5 w-4.5 shrink-0'
                     />
                     {c.label}
                   </a>
