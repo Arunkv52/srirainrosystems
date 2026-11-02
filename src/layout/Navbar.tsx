@@ -1,8 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 import RoImg from '../assets/navbar/Ro-img.jpeg'
+import { Link } from 'react-router'
+import Home from '../pages/Home'
+import Logo from '../assets/logo.png'
+import { BsWhatsapp } from 'react-icons/bs'
+import { MdWifiCalling3 } from "react-icons/md";
+
 
 /* ---------- Edit these ---------- */
-const BRAND = 'Sri Rain Ro Systems'
 const PHONE = '+919999999999' // Replace with your phone number.
 const WHATSAPP = '919999999999' // Country code + number, without "+".
 const WHATSAPP_TEXT = "Hi, I'd like to know more about your RO systems."
@@ -15,8 +20,6 @@ const ICONS = {
   brand: 'M12 2.5c-2.2 3.5-6 7-6 11a6 6 0 0 0 12 0c0-4-3.8-7.5-6-11z',
   water: 'M12 2.5c-2.2 3.5-6 7-6 11a6 6 0 0 0 12 0c0-4-3.8-7.5-6-11z',
   chevron: 'm6 9 6 6 6-6',
-  chat: 'M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8A8.5 8.5 0 0 1 8.7 3.9a8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z',
-  phone: 'M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 8.9a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.8 2.1z',
   close: 'M18 6 6 18M6 6l12 12',
   menu: 'M4 6h16M4 12h16M4 18h16'
 } as const
@@ -33,25 +36,25 @@ const rangeItems: MenuItem[] = [
   {
     label: 'Domestic RO',
     description: 'Home water purifiers',
-    href: '/domestic-ro',
+    href: '/domesticro',
     image: RoImg
   },
   {
     label: 'Commercial RO',
     description: 'Offices, shops, hotels',
-    href: '/commercial-ro',
+    href: '/commercialro',
     image: RoImg
   },
   {
     label: 'Industrial RO',
     description: 'Industrial water treatment',
-    href: '/industrial-ro',
+    href: '/industrialro',
     image: RoImg
   },
   {
     label: 'Spares & Service',
     description: 'Filters, membranes, AMC',
-    href: '/spares-service',
+    href: '/sparesandservices',
     image: RoImg
   }
 ]
@@ -61,7 +64,7 @@ const RANGE_LABEL = 'Our range'
 const links = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
-  { label: 'Knowledge Hub', href: '/knowledge-hub' },
+  { label: 'Knowledge Hub', href: '/knowledgehub' },
   { label: 'Contact', href: '/contact' }
 ]
 
@@ -175,18 +178,13 @@ export default function Navbar () {
         {/* ===== Top bar ===== */}
         <nav
           aria-label='Main navigation'
-          className='flex items-center justify-between gap-2  border border-white/10 bg-white px-3 py-2  backdrop-blur-md'
+          className='flex items-center justify-between gap-2  border border-white/10 bg-white px-3
+           py-2  backdrop-blur-md'
         >
           {/* Logo */}
-          <a
-            href='/'
-            className='flex items-center gap-2 rounded-full pl-2 pr-3 text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300'
-          >
-            <Icon d={ICONS.brand} className='h-6 w-6 text-black' />
-            <span className='text-base font-semibold tracking-tight text-black'>
-              {BRAND}
-            </span>
-          </a>
+          <Link to={'/'} element={<Home />}>
+            <img src={Logo} alt='' className='w-32.5' />
+          </Link>
 
           {/* Desktop links */}
           <ul className='hidden items-center gap-1 lg:flex'>
@@ -234,7 +232,8 @@ export default function Navbar () {
               aria-label='WhatsApp'
               className='hidden items-center gap-2 rounded-full border border-black/15 px-3 py-2 text-sm font-medium text-black transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 sm:flex'
             >
-              <Icon d={ICONS.chat} className='h-4 w-4 text-emerald-400' />
+              
+              <BsWhatsapp />
               <span className='hidden xl:inline'>WhatsApp</span>
             </a>
             <a
@@ -242,7 +241,7 @@ export default function Navbar () {
               aria-label='Call now'
               className='hidden items-center gap-2 rounded-full border border-black/15 px-3 py-2 text-sm font-medium text-black transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 sm:flex'
             >
-              <Icon d={ICONS.phone} className='h-4 w-4 text-cyan-300' />
+              <MdWifiCalling3 />
               <span className='hidden xl:inline'>Call Now</span>
             </a>
             <a
@@ -311,7 +310,7 @@ export default function Navbar () {
             mobileOpen ? 'block' : 'hidden'
           }`}
         >
-          <div className='max-h-[80vh] overflow-y-auto rounded-3xl border border-white/10 bg-(--white)/30 p-3 shadow-2xl shadow-black/30 backdrop-blur-md'>
+          <div className='max-h-[80vh] overflow-y-auto rounded-xs border border-white/10 bg-(--white)/30 p-3 shadow-2xl shadow-black/30 backdrop-blur-md'>
             <ul className='flex flex-col'>
               <li>
                 <a

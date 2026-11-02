@@ -1,3 +1,8 @@
+import { Link } from "react-router"
+import Logo from '../assets/logo.png'
+import Home from "../pages/Home"
+
+
 /* ---------- Edit these ---------- */
 const BRAND = 'Sri Rain Ro Systems'
 const INTRO = 'RO water purification for homes, businesses and industry.'
@@ -109,14 +114,17 @@ export default function Footer () {
     <footer className='bg-linear-to-br from-(--blue) to-(--primary) text-white'>
       <div className=' px-6 pb-10 pt-16 sm:px-10 md:px-8 lg:pt-10'>
         {/* Logo */}
-        <a
+        {/* <a
           href='/'
           aria-label={`${BRAND} home`}
           className='inline-flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300'
         >
           <Icon paths={[ICONS.drop]} className='h-12 w-12 text-cyan-300' />
           <span className='text-3xl font-bold tracking-tight'>{BRAND}</span>
-        </a>
+        </a> */}
+        <Link to={'/'} element={<Home />}>
+            <img src={Logo} alt='' className='w-[200px] bg-white'/>
+          </Link>
 
         {/* Main row */}
         <div className='mt-16 md:grid grid md:grid-cols-[4fr_1fr_1fr] grid-cols-1 md:gap-14 gap-8 md:mt-2'>

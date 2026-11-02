@@ -1,9 +1,16 @@
+import AboutPage from "../components/section/about/AboutPage"
+import Footer from "../layout/Footer"
+import Navbar from "../layout/Navbar"
 
 const About = () => {
   return (
-    <div>
-      <h1>About</h1>
-    </div>
+    <>
+        <main>
+          <Navbar />
+          <AboutPage/>
+          <Footer />
+        </main>
+    </>
   )
 }
 

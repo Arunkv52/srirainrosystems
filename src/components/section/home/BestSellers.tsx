@@ -176,7 +176,7 @@ export default function BestSellers() {
       aria-labelledby="best-sellers-title"
       className="bg-slate-50 py-20 sm:py-24"
     >
-      <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
+      <div className="px-5 md:px-8">
         {/* Heading */}
         <div className="mx-auto max-w-2xl text-center">
           <p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-widest text-cyan-700">

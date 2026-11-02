@@ -30,9 +30,9 @@ function OfferCard ({
   imageFit = 'cover'
 }: OfferCardProps) {
   return (
-    <article className='flex min-h-[248px] items-stretch gap-3 bg-white p-[18px] sm:gap-2.5'>
+    <article className='flex min-h-62 items-stretch gap-3 bg-white p-4.5 sm:gap-2.5'>
       {discountGraphic ? (
-        <div className='flex aspect-square w-[38%] shrink-0 items-center justify-center bg-[#062b53] text-center text-[40px] font-normal leading-[1.05] text-white sm:w-[38%] lg:w-[211px]'>
+        <div className='flex aspect-square w-[38%] shrink-0 items-center justify-center bg-[#062b53] text-center text-[40px] font-normal leading-[1.05] text-white sm:w-[38%] lg:w-52.75'>
           <span>
             5%
             <br />
@@ -43,7 +43,7 @@ function OfferCard ({
         <img
           src={image}
           alt={imageAlt ?? ''}
-          className={`aspect-square w-[38%] shrink-0 bg-white sm:w-[38%] lg:w-[211px] ${
+          className={`aspect-square w-[38%] shrink-0 bg-white sm:w-[38%] lg:w-52.75 ${
             imageFit === 'contain' ? 'object-contain' : 'object-cover'
           }`}
         />

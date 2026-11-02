@@ -68,19 +68,20 @@ const Herosection = () => {
 
         <div className="absolute inset-0 flex items-center justify-start px-6 text-left ">
           <div className="text-white">
-            <p className="mb-3 text-sm font-semibold uppercase text-(--bluedark)">
+            <p className="mb-3 text-sm font-semibold uppercase text-(--primary)">
               Pure Water | Healthy Life
             </p>
 
-            <h3 className="text-4xl font-medium md:text-5xl text-(--blue)">
+            <h3 className="text-4xl md:font-semibold font-bold md:text-5xl md:text-(--white) text-black">
               Pure Water Solutions <br /> for Every Need
             </h3>
             
             {/* Buttons */}
             <div className='py-4 flex justify-start items-center gap-5'>
-              <button className='bg-(--blue) text-white py-3 px-7 rounded-lg cursor-pointer'>Explore Products</button>
-              <button className='border border-(--blue) text-(--blue) py-3 px-7 rounded-lg cursor-pointer'>Get a Free Quote</button>
+              <button className='inline-flex items-center justify-center gap-1.5 rounded-full border border-(--white)/25 px-4 py-2.5 text-sm font-semibold text-(--white) transition-colors hover:border-(--primary) hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500'>Explore Products</button>
+              <button className='inline-flex items-center justify-center rounded-full bg-(--primary) px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-(--primary)/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2'>Get a Free Quote</button>
             </div>
+
           </div>
         </div>
       </div>

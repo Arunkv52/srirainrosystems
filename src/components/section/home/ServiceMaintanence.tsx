@@ -127,20 +127,13 @@ export default function ServiceMaintenance() {
       aria-labelledby="service-title"
       className="bg-slate-50 py-20 sm:py-24"
     >
-      <div className="px-5 sm:px-8 lg:px-5">
+      <div className="px-5 md:px-8">
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
           {/* ---- Left: intro panel (stays in view while you scroll the cards) ---- */}
           <div className="lg:col-span-4">
-            <div className="relative overflow-hidden rounded-xs bg-gradient-to-br from-(--blue) to-(--primary) p-8 text-white sm:p-10 lg:sticky lg:top-28 md:h-1/2 h-auto">
-              {/* Decorative water drop */}
-              <svg
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="pointer-events-none absolute -bottom-12 -right-12 h-72 w-72 text-cyan-300/10"
-                aria-hidden="true"
-              >
-                <path d="M12 2.5s6 6.2 6 10.5a6 6 0 1 1-12 0C6 8.7 12 2.5 12 2.5z" />
-              </svg>
+            <div className="services-bg relative overflow-hidden rounded-xs  p-8 text-white sm:p-10 lg:sticky lg:top-28 md:h-1/2 h-auto">
+              
+             
 
               <p className="relative text-sm font-semibold uppercase tracking-widest text-cyan-300">
                 Service &amp; maintenance
@@ -159,7 +152,7 @@ export default function ServiceMaintenance() {
               <div className="relative mt-8 flex flex-wrap gap-3">
                 <a
                   href="/contact#service"
-                  className="inline-flex items-center gap-2 rounded-full bg-cyan-300 px-6 py-3 text-sm font-semibold text-[#06242a] transition-colors hover:bg-cyan-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                  className="inline-flex items-center gap-2 rounded-full bg-(--light-green) px-6 py-3 text-sm font-semibold text-[#06242a] transition-colors hover:bg-cyan-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                 >
                   Book a service
                   <Icon d={ARROW} className="h-4 w-4" />

@@ -248,7 +248,7 @@ export default function SparesCarousel () {
       aria-labelledby='spares-title'
       className='bg-gradient-to-br from-(--blue) to-(--primary) py-16 text-white sm:py-24'
     >
-      <div className='mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12'>
+      <div className='px-5 md:px-8'>
         {/* ---- Top: title on the left, tabs on the right ---- */}
         <div className='flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between'>
           <div>
