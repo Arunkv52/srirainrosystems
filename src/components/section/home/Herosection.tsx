@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import Video from '../../../assets/home/0_Experiment_Tablet_1280x720.mp4'
-
-
+import ButtonFill from '../../ui/ButtonFill'
+import ButtonOutline from '../../ui/ButtonOutline'
 
 const Herosection = () => {
   const sectionRef = useRef<HTMLElement>(null)
@@ -26,10 +26,7 @@ const Herosection = () => {
 
         if (scrollDistance <= 0) return
 
-        const scrolled = Math.min(
-          Math.max(-sectionRect.top, 0),
-          scrollDistance
-        )
+        const scrolled = Math.min(Math.max(-sectionRect.top, 0), scrollDistance)
 
         const progress = scrolled / scrollDistance
         video.currentTime = progress * video.duration
@@ -53,35 +50,34 @@ const Herosection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative h-[300vh]"
-      aria-label="Scroll-controlled video section"
+      className='relative h-[300vh]'
+      aria-label='Scroll-controlled video section'
     >
-      <div className="sticky top-0 h-screen w-full overflow-hidden">
+      <div className='sticky top-0 h-screen w-full overflow-hidden'>
         <video
           ref={videoRef}
-          className="h-full w-full object-cover"
+          className='h-full w-full object-cover'
           src={Video}
           muted
           playsInline
-          preload="auto"
+          preload='auto'
         />
 
-        <div className="absolute inset-0 flex items-center justify-start px-6 text-left ">
-          <div className="text-white">
-            <p className="mb-3 text-sm font-semibold uppercase text-(--primary)">
+        <div className='absolute inset-0 flex items-center justify-start px-6 text-left '>
+          <div className='text-white'>
+            <p className='mb-3 text-sm font-semibold uppercase text-(--primary)'>
               Pure Water | Healthy Life
             </p>
 
-            <h3 className="text-4xl md:font-semibold font-bold md:text-5xl md:text-(--white) text-black">
+            <h3 className='text-4xl md:font-semibold font-bold md:text-5xl md:text-(--white) text-black'>
               Pure Water Solutions <br /> for Every Need
             </h3>
-            
+
             {/* Buttons */}
             <div className='py-4 flex justify-start items-center gap-5'>
-              <button className='inline-flex items-center justify-center gap-1.5 rounded-full border border-(--white)/25 px-4 py-2.5 text-sm font-semibold text-(--white) transition-colors hover:border-(--primary) hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500'>Explore Products</button>
-              <button className='inline-flex items-center justify-center rounded-full bg-(--primary) px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-(--primary)/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2'>Get a Free Quote</button>
+              <ButtonOutline text={'Explore Products'} link={'/'}/>
+              <ButtonFill text={'Get a Quote'} link={'/contact'} />
             </div>
-
           </div>
         </div>
       </div>

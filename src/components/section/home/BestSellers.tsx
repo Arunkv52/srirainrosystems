@@ -1,4 +1,8 @@
-import Img from "../../../assets/home/ro-commercial.jpeg";
+import DomesticImg from "../../../assets/home/domestic-ro.jpg";
+import CommercialImg from "../../../assets/home/interior-crop.jpg";
+import IndustryImg from "../../../assets/home/industry-ro.jpg";
+import WaterSoftenersImg from "../../../assets/home/water-softeners.jpg";
+
 
 /* ---------- Types ---------- */
 type Badge = "New launch" | "Popular choice" | "Best value";
@@ -20,34 +24,35 @@ const products: Product[] = [
     name: "Home RO + UV + MF Water Purifier, 8 L Storage",
     category: "Domestic RO",
     badge: "New launch",
-    image: Img,
+    image: DomesticImg,
     features: ["RO", "UV", "MF", "8 L tank"],
     href: "/domestic-ro/home-ro-8l",
-  },
-  {
-    id: "wall-mount-7l",
-    name: "Wall-Mounted RO + UV Purifier, 7 L Storage",
-    category: "Domestic RO",
-    badge: "Popular choice",
-    image: Img,
-    features: ["RO", "UV", "Mineral", "7 L tank"],
-    href: "/domestic-ro/wall-mount-7l",
   },
   {
     id: "commercial-50",
     name: "Commercial RO Plant, 50 LPH for Offices and Shops",
     category: "Commercial RO",
     badge: "Popular choice",
-    image: Img,
+    image: CommercialImg,
     features: ["50 LPH", "SS frame", "Auto flush"],
     href: "/commercial-ro/commercial-50",
   },
   {
+    id: "wall-mount-7l",
+    name: "Wall-Mounted RO + UV Purifier, 7 L Storage",
+    category: "Industrial RO",
+    badge: "Popular choice",
+    image: IndustryImg,
+    features: ["RO", "UV", "Mineral", "7 L tank"],
+    href: "/domestic-ro/wall-mount-7l",
+  },
+  
+  {
     id: "industrial-250",
     name: "Industrial RO Plant, 250 LPH Water Treatment",
-    category: "Industrial RO",
+    category: "Water Softeners",
     badge: "New launch",
-    image: Img,
+    image: WaterSoftenersImg,
     features: ["250 LPH", "Pre-treatment", "AMC ready"],
     href: "/industrial-ro/industrial-250",
   },

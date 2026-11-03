@@ -111,7 +111,7 @@ h3 {
     color-mix(in srgb, var(--blue) 85%, transparent),
     color-mix(in srgb, var(--green) 85%, transparent)
   ),
-  url('./assets/about/crystal-clear.jpg');
+    url('./assets/home/elegant-modern-water-cooler-stylish-office-interior.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -125,7 +125,7 @@ h3 {
     color-mix(in srgb, var(--blue) 85%, transparent),
     color-mix(in srgb, var(--green) 85%, transparent)
   ),
-  url('./assets/about/crystal-clear.jpg');
+  url('./assets/home/elegant-modern-water-cooler-stylish-office-interior.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -140,6 +140,20 @@ h3 {
     color-mix(in srgb, var(--green) 85%, transparent)
   ),
   url('./assets/about/crystal-clear.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+.common-prod-bg{
+          background-image:
+  linear-gradient(
+    95deg,
+    color-mix(in srgb, var(--blue) 85%, transparent),
+    color-mix(in srgb, var(--green) 85%, transparent)
+  ),
+  url('./assets/Products/woman-kitchen-drinking.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

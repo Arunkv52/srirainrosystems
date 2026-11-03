@@ -1,3 +1,12 @@
+import IndustryImg from '../../../assets/Products/Industrial/WhatsApp Image 2026-10-10 at 16.49.30.jpeg'
+import Img1 from '../../../assets/Products/Rain water filteration/Image-1.jpg'
+import Img2 from '../../../assets/Products/Rain water filteration/image-2.jpg'
+import Img3 from '../../../assets/Products/Rain water filteration/image-3.jpg'
+import Img4 from '../../../assets/Products/Rain water filteration/image-4.jpg'
+import Img5 from '../../../assets/Products/Rain water filteration/image-5.jpg'
+import Img6 from '../../../assets/Products/Rain water filteration/image-6.jpg'
+
+
 /* =========================================================
    1. YOUR DATA  (edit this part)
    ========================================================= */
@@ -97,6 +106,7 @@ const rainModels: RainModel[] = [
     forWho: "Individual houses and small buildings",
     roof: "Up to 120 m²",
     roofNote: "Suggested roof area",
+    image : Img1,
     bullets: [
       "Inline or gravity-operated design",
       "Removable mesh for cleaning",
@@ -108,6 +118,7 @@ const rainModels: RainModel[] = [
     forWho: "Apartments, offices, schools and shops",
     roof: "120–350 m²",
     roofNote: "Suggested roof area",
+    image : Img2,
     bullets: [
       "Higher-flow filtration options",
       "Self-cleaning or manual-cleaning models",
@@ -119,6 +130,7 @@ const rainModels: RainModel[] = [
     forWho: "Factories, warehouses and large roof areas",
     roof: "350 m² and above",
     roofNote: "Suggested roof area",
+    image : Img3,
     bullets: [
       "Larger inlet and outlet connections",
       "Multiple filters or a high-flow filter assembly",
@@ -141,6 +153,111 @@ const rainSpecs: Spec[] = [
   { label: "Outlet connection", value: "Selected to match the rainwater pipe and required flow" },
   { label: "Water destination", value: "Storage tank, sump or groundwater recharge pit" },
 ];
+
+/* ---- Water dispensers ---- */
+// The three taps: hot, cold and normal temperature
+const dispenserTaps = [
+  {
+    name: "Hot",
+    temp: "Approx. 85–95°C",
+    gradient: "from-orange-500 to-amber-500",
+    
+    facts: [
+      { label: "Heating capacity", value: "Approx. 5 litres/hour" },
+      { label: "Hot water tank", value: "Approx. 1–2 litres" },
+      { label: "Heating power", value: "Approx. 450–500 W" },
+    ],
+  },
+  {
+    name: "Cold",
+    temp: "Approx. 7–15°C",
+    gradient: "from-cyan-500 to-blue-600",
+    
+    facts: [
+      { label: "Cooling capacity", value: "Approx. 2–3 litres/hour" },
+      { label: "Cold water tank", value: "Approx. 2–4 litres" },
+      { label: "Cooling power", value: "Approx. 80–110 W" },
+    ],
+  },
+  {
+    name: "Normal",
+    temp: "Normal temperature",
+    gradient: "from-slate-500 to-slate-700",
+    
+    facts: [
+      { label: "Normal water tank", value: "Model-dependent" },
+      { label: "Number of taps", value: "3" },
+      { label: "Dispensing options", value: "Hot, cold and normal-temperature water" },
+    ],
+  },
+];
+
+type DispenserConfig = {
+  name: string;
+  tag: string; // small label on the picture
+  forWho: string;
+  bullets: string[];
+  image?: string; // optional photo
+};
+
+const dispenserConfigs: DispenserConfig[] = [
+  {
+    name: "Bottle-type water dispenser",
+    tag: "Bottle-fed",
+    forWho: "Homes and small offices",
+    image: Img4,
+    bullets: [
+      "Uses a water bottle, commonly 20 litres",
+      "Hot, cold and normal dispensing",
+    ],
+  },
+  {
+    name: "RO water purifier with dispenser",
+    tag: "RO built in",
+    forWho: "Offices and shared-use areas",
+    image: Img5,
+    bullets: [
+      "Integrated RO purification, with optional additional treatment stages",
+      "Direct water supply on compatible models",
+      "Hot, cold and normal purified-water outlets",
+    ],
+  },
+  {
+    name: "Commercial water dispenser",
+    tag: "High capacity",
+    forWho: "Factories, canteens, institutions and larger offices",
+    image:Img6,
+    bullets: [
+      "Higher-capacity storage and dispensing options",
+      "Stainless-steel tanks available",
+    ],
+  },
+];
+
+const dispenserSpecs: Spec[] = [
+  { label: "Product type", value: "Hot, cold and normal water dispenser" },
+  { label: "Dispenser type", value: "Floor-standing or tabletop" },
+  { label: "Dispensing options", value: "Hot, cold and normal-temperature water" },
+  { label: "Number of taps", value: "3" },
+  { label: "Hot water temperature", value: "Approx. 85–95°C" },
+  { label: "Cold water temperature", value: "Approx. 7–15°C" },
+  { label: "Heating capacity", value: "Approx. 5 litres/hour" },
+  { label: "Cooling capacity", value: "Approx. 2–3 litres/hour" },
+  { label: "Hot water tank", value: "Approx. 1–2 litres" },
+  { label: "Cold water tank", value: "Approx. 2–4 litres" },
+  { label: "Normal water tank", value: "Model-dependent" },
+  { label: "Tank material", value: "Food-grade stainless steel or suitable food-grade plastic" },
+  { label: "Cooling system", value: "Compressor cooling" },
+  { label: "Refrigerant", value: "Model-dependent; commonly R134a in some models" },
+  { label: "Heating power", value: "Approx. 450–500 W" },
+  { label: "Cooling power", value: "Approx. 80–110 W" },
+  { label: "Power supply", value: "220–240 V AC, 50 Hz, single phase" },
+  { label: "Safety features", value: "Hot-water child lock and overheat protection, depending on model" },
+  { label: "Indicators", value: "Power, heating and cooling LEDs" },
+  { label: "Applications", value: "Homes, offices, shops, schools, hospitals and factories" },
+];
+
+const dispenserApplications = ["Homes", "Offices", "Shops", "Schools", "Hospitals", "Factories"];
 
 /* =========================================================
    2. SMALL HELPERS
@@ -244,20 +361,9 @@ function Hero() {
   return (
     <section
       aria-labelledby="industrial-title"
-      className="relative isolate overflow-hidden bg-gradient-to-br from-(--blue) to-(--primary) pb-16 pt-36 text-white sm:pb-24 sm:pt-44"
+      className="common-prod-bg relative isolate overflow-hidden bg-gradient-to-br from-(--blue) to-(--primary) pb-16 pt-36 text-white sm:pb-24 sm:pt-44"
     >
-      <svg
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        className="pointer-events-none absolute -bottom-24 right-0 -z-10 h-[28rem] w-[28rem] text-cyan-300/10 sm:right-20"
-        aria-hidden="true"
-      >
-        <path d={DROP} />
-      </svg>
-      <span
-        className="pointer-events-none absolute -left-20 top-10 -z-10 h-72 w-72 rounded-full bg-cyan-300/10 blur-3xl"
-        aria-hidden="true"
-      />
+     
 
       <div className={wrap}>
         <nav aria-label="Breadcrumb" className="text-sm text-white/70">
@@ -278,12 +384,12 @@ function Hero() {
           id="industrial-title"
           className="mt-6 max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl"
         >
-          Industrial RO &amp; rainwater filtration
+          Industrial RO, rainwater filters &amp; dispensers
         </h1>
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/75 sm:text-lg">
           Industrial water purification solutions for factories, manufacturing
           plants and process-water applications, plus rainwater harvesting
-          filters, from {BRAND}.
+          filters and hot, cold and normal water dispensers, from {BRAND}.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">
@@ -299,6 +405,13 @@ function Hero() {
             className="inline-flex items-center gap-2 rounded-full border border-white/25 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
           >
             Rainwater filters
+            <Icon d="M12 5v14M6 13l6 6 6-6" className="h-4 w-4" />
+          </a>
+          <a
+            href="#dispensers"
+            className="inline-flex items-center gap-2 rounded-full border border-white/25 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
+          >
+            Water dispensers
             <Icon d="M12 5v14M6 13l6 6 6-6" className="h-4 w-4" />
           </a>
         </div>
@@ -359,12 +472,9 @@ function PlantOverview() {
             </div>
           </div>
 
-          <Picture
-            src={PLANT_IMAGE}
-            alt="Industrial RO plant"
-            label="Industrial RO plant"
-            className="aspect-[4/3] rounded-xs shadow-xl shadow-cyan-900/10"
-          />
+         
+          <img src={IndustryImg} alt="Industrial RO plant"
+            className="aspect-[4/3] rounded-xs shadow-xl shadow-cyan-900/10" />
         </div>
       </div>
     </section>
@@ -650,11 +760,163 @@ function Rainwater() {
 }
 
 /* =========================================================
+   8b. SECTION: WATER DISPENSERS
+   ========================================================= */
+function Dispensers() {
+  return (
+    <section id="dispensers" aria-labelledby="dispenser-title" className="scroll-mt-24 bg-white py-20 sm:py-28">
+      <div className={wrap}>
+        <div className="mx-auto max-w-2xl text-center">
+          <div className="flex justify-center">
+            <Eyebrow>Water dispensers</Eyebrow>
+          </div>
+          <h2
+            id="dispenser-title"
+            className="mt-4 text-3xl font-semibold tracking-tight text-(--primary) sm:text-4xl"
+          >
+            Hot, cold &amp; normal water dispensers
+          </h2>
+          <p className="mt-4 text-base leading-relaxed text-slate-600">
+            Three taps, three temperatures. Floor-standing or tabletop
+            dispensers for homes, offices, shops, schools, hospitals and
+            factories.
+          </p>
+        </div>
+
+        {/* The three taps */}
+        <ul className="mt-12 grid gap-5 md:grid-cols-3">
+          {dispenserTaps.map((t) => (
+            <li
+              key={t.name}
+              className={`rounded-xs bg-gradient-to-br ${t.gradient} p-7 text-white shadow-lg shadow-slate-900/10`}
+            >
+              <div className="flex items-start justify-between">
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-widest text-white/80">
+                    {t.name} water
+                  </p>
+                  <p className="mt-2 text-2xl font-semibold leading-tight">{t.temp}</p>
+                </div>
+                <span className="grid h-11 w-11 place-items-center rounded-xl bg-white/20">
+                  <Icon d="M10 14V5a2 2 0 1 1 4 0v9a4 4 0 1 1-4 0z" className="h-5 w-5" />
+                </span>
+              </div>
+
+              <dl className="mt-6 space-y-3 border-t border-white/25 pt-5">
+                {t.facts.map((f) => (
+                  <div key={f.label} className="flex items-baseline justify-between gap-4 text-sm">
+                    <dt className="text-white/80">{f.label}</dt>
+                    <dd className="text-right font-semibold">{f.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </li>
+          ))}
+        </ul>
+
+        {/* Available configurations */}
+        <div className="mx-auto mt-20 max-w-2xl text-center">
+          <h3 className="text-2xl font-semibold tracking-tight text-(--primary) sm:text-3xl">
+            Available configurations
+          </h3>
+        </div>
+
+        <ul className="mt-10 grid gap-6 lg:grid-cols-3">
+          {dispenserConfigs.map((c) => (
+            <li key={c.name}>
+              <article className="group flex h-full flex-col overflow-hidden rounded-xs border border-slate-200 bg-white transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-xl hover:shadow-cyan-900/10">
+                <div className="relative">
+                  <Picture src={c.image} alt={c.name} label={c.name} className="aspect-[16/10]" />
+                  <span className="absolute left-5 top-5 rounded-full bg-white/90 px-3.5 py-1 text-xs font-semibold text-(--primary) backdrop-blur">
+                    {c.tag}
+                  </span>
+                </div>
+
+                <div className="flex flex-1 flex-col p-7">
+                  <h4 className="text-xl font-semibold text-(--primary)">{c.name}</h4>
+                  <p className="mt-1 text-sm font-medium text-cyan-700">Suitable for {c.forWho.toLowerCase()}</p>
+
+                  <ul className="mt-5 space-y-2.5">
+                    {c.bullets.map((b) => (
+                      <li key={b} className="flex gap-3 text-sm leading-relaxed text-slate-600">
+                        <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-cyan-100 text-cyan-700">
+                          <Icon d={CHECK} className="h-3 w-3" />
+                        </span>
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="mt-auto flex flex-wrap items-center gap-3 pt-7">
+                    <a
+                      href={quoteHref("Water dispenser", c.name)}
+                      className="inline-flex items-center gap-2 rounded-full bg-(--primary) px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-(--primary)/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2"
+                    >
+                      Get a quote
+                      <Icon d={ARROW} className="h-4 w-4" />
+                    </a>
+                    <a
+                      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi, I'd like details on the ${c.name}.`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`WhatsApp about the ${c.name}`}
+                      className="grid h-11 w-11 place-items-center rounded-full border border-(--primary)/25 text-(--primary) transition-colors hover:border-(--primary) hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
+                    >
+                      <Icon d={CHAT} className="h-5 w-5" />
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </li>
+          ))}
+        </ul>
+
+        {/* Datasheet and applications */}
+        <div className="mt-16 grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
+          <div className="lg:sticky lg:top-28 lg:col-span-4">
+            <Eyebrow>Specifications</Eyebrow>
+            <h3 className="mt-4 text-2xl font-semibold leading-tight text-(--primary) sm:text-3xl">
+              Hot, cold &amp; normal water dispenser
+            </h3>
+            <p className="mt-3 text-base leading-relaxed text-slate-600">
+              Typical specifications. These ranges are consistent with
+              published specifications for several dispenser models, but they
+              are not universal ratings.
+            </p>
+
+            <p className="mt-6 text-xs font-semibold uppercase tracking-wider text-slate-500">
+              Applications
+            </p>
+            <ul className="mt-3 flex flex-wrap gap-2" aria-label="Applications">
+              {dispenserApplications.map((a) => (
+                <li
+                  key={a}
+                  className="rounded-full bg-cyan-50 px-3.5 py-1.5 text-sm font-medium text-cyan-800 ring-1 ring-inset ring-cyan-100"
+                >
+                  {a}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="lg:col-span-8">
+            <Datasheet title="Water dispenser" tag="Typical specification" rows={dispenserSpecs} />
+            <p className="mt-3 text-xs leading-relaxed text-slate-500">
+              Please confirm the exact specification for the model you choose.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* =========================================================
    9. SECTION: CALL TO ACTION
    ========================================================= */
 function CtaBand() {
   return (
-    <section aria-labelledby="industrial-cta-title" className="bg-white py-20 sm:py-28">
+    <section aria-labelledby="industrial-cta-title" className="bg-white pb-20 sm:pb-28">
       <div className={wrap}>
         <div className="relative isolate overflow-hidden rounded-xs bg-gradient-to-br from-(--blue) to-(--primary) px-7 py-12 text-white sm:px-14 sm:py-16">
           <svg
@@ -711,6 +973,7 @@ export default function IndustrialRoPage() {
       <ProcessAndSpecs />
       <FeaturesAndApplications />
       <Rainwater />
+      <Dispensers />
       <CtaBand />
     </main>
   );

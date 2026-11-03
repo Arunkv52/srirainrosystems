@@ -2,7 +2,12 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router'
 import { BsWhatsapp } from 'react-icons/bs'
 import { MdWifiCalling3 } from 'react-icons/md'
-import RoImg from '../assets/navbar/Ro-img.jpeg'
+import CommercialRoImg from '../assets/navbar/commercial-ro.jpeg'
+import DomesticRoImg from '../assets/navbar/domestic-ro.jpg'
+import IndustrialRoImg from '../assets/navbar/industrial-ro.jpg'
+import SparesandServiceslRoImg from '../assets/navbar/plumber-change-water-filter.jpg'
+import WaterSoftenersImg from '../assets/navbar/water-softener.jpeg'
+
 import Logo from '../assets/logo.png'
 
 /* ---------- Edit these ---------- */
@@ -24,10 +29,11 @@ type MenuItem = { label: string; description: string; href: string; image: strin
 
 // Items shown in the dropdown panel.
 const rangeItems: MenuItem[] = [
-  { label: 'Domestic RO', description: 'Home water purifiers', href: '/domesticro', image: RoImg },
-  { label: 'Commercial RO', description: 'Offices, shops, hotels', href: '/commercialro', image: RoImg },
-  { label: 'Industrial RO', description: 'Industrial water treatment', href: '/industrialro', image: RoImg },
-  { label: 'Spares & Service', description: 'Filters, membranes, AMC', href: '/sparesandservices', image: RoImg }
+  { label: 'Domestic RO', description: 'Home water purifiers', href: '/domesticro', image: DomesticRoImg },
+  { label: 'Commercial RO', description: 'Offices, shops, hotels', href: '/commercialro', image: CommercialRoImg },
+  { label: 'Industrial RO', description: 'Industrial water treatment', href: '/industrialro', image: IndustrialRoImg },
+  { label: 'Water Softeners', description: 'Solutions for all sectors', href: '/watersofteners', image: WaterSoftenersImg },
+  { label: 'Spares & Service', description: 'Filters, membranes, AMC', href: '/sparesandservices', image: SparesandServiceslRoImg }
 ]
 
 const RANGE_LABEL = 'Our range'
@@ -230,7 +236,7 @@ export default function Navbar () {
           }`}
         >
           <div className='rounded-sm border border-black/10 bg-white p-3 shadow-2xl shadow-black/20'>
-            <ul className='grid grid-cols-4 gap-2'>
+            <ul className='grid grid-cols-5 gap-2'>
               {rangeItems.map(item => (
                 <li key={item.href}>
                   <Link
@@ -238,7 +244,7 @@ export default function Navbar () {
                     tabIndex={rangeOpen ? 0 : -1}
                     className={`group flex h-full flex-col gap-3 rounded-2xl p-4 transition-colors hover:bg-black/5 ${focusRing}`}
                   >
-                    <img src={item.image} alt='' className='h-52 w-full object-cover' />
+                    <img src={item.image} alt='' className='h-full w-full object-cover' />
                     <span>
                       <span className='block text-base font-semibold text-black'>{item.label}</span>
                       <span className='mt-0.5 block text-sm text-black/60'>{item.description}</span>

@@ -18,14 +18,14 @@ const ICONS = {
 
 // Main menu
 const menu = [
-  { label: 'Home', href: '/' },
-  { label: 'Domestic RO', href: '/domestic-ro' },
-  { label: 'Commercial RO', href: '/commercial-ro' },
-  { label: 'Industrial RO', href: '/industrial-ro' },
-  { label: 'Spares & Service', href: '/spares-service' },
-  { label: 'About Us', href: '/about' },
-  { label: 'Knowledge Hub', href: '/knowledge-hub' },
-  { label: 'Contact', href: '/contact' }
+  { label: 'Home', link: '/' },
+  { label: 'Domestic RO', link: '/domesticro' },
+  { label: 'Commercial RO', link: '/commercialro' },
+  { label: 'Industrial RO', link: '/industrialro' },
+  { label: 'Spares & Service', link: '/sparesandservices' },
+  { label: 'About Us', link: '/about' },
+  { label: 'Knowledge Hub', link: '/knowledgehub' },
+  { label: 'Contact', link: '/contact' }
 ]
 
 // Contact + social column
@@ -142,14 +142,13 @@ export default function Footer () {
           <nav aria-label='Footer menu' className='7'>
             <ul className='space-y-2'>
               {menu.map(m => (
-                <li key={m.href}>
-                  <a
-                    href={m.href}
-                    className={`text-base font-normal transition-colors hover:text-cyan-300 ${linkFocus}`}
-                  >
+                <li key={m.link}>
+                  
+                  <Link to={m.link} className='text-base font-normal transition-colors hover:text-cyan-300 ${linkFocus}'>
                     {m.label}
-                  </a>
+                </Link>
                 </li>
+                
               ))}
             </ul>
           </nav>

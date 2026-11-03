@@ -1,3 +1,5 @@
+import Ro25Img from '../../../assets/Products/Commercial/25 LPH/WhatsApp Image 2026-10-05 at 13.15.35.jpeg'
+import Ro50Img from '../../../assets/Products/Commercial/50 LPH/WhatsApp Image 2026-10-08 at 12.47.21.jpeg'
 /* =========================================================
    1. YOUR DATA  (edit this part)
    ========================================================= */
@@ -38,6 +40,7 @@ const products: Product[] = [
     daily: "100 L/day",
     dailyNote: "Daily output at 8 hours. Theoretical, under rated conditions",
     applications: ["Homes", "Offices", "Small shops", "Low-volume needs"],
+    image: Ro25Img,
     specs: [
       { parameter: "Product name", value: "SRRS-RO-25 LPH RO Water Purifier" },
       { parameter: "Purification technology", value: "Reverse Osmosis (RO)" },
@@ -68,6 +71,7 @@ const products: Product[] = [
     daily: "200 L/day",
     dailyNote: "Theoretical daily output at 8 hours of operation",
     applications: ["Offices", "Shops", "Restaurants", "Clinics", "Small facilities"],
+    image: Ro50Img,
     specs: [
       { parameter: "Product model", value: "SRRS-RO-50 LPH (suggested model code)" },
       { parameter: "System type", value: "Commercial reverse osmosis plant" },
@@ -218,20 +222,9 @@ function Hero() {
   return (
     <section
       aria-labelledby="commercial-title"
-      className="relative isolate overflow-hidden bg-gradient-to-br from-(--blue) to-(--primary) pb-16 pt-36 text-white sm:pb-24 sm:pt-44"
+      className="common-prod-bg relative isolate overflow-hidden bg-gradient-to-br from-(--blue) to-(--primary) pb-16 pt-36 text-white sm:pb-24 sm:pt-44"
     >
-      <svg
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        className="pointer-events-none absolute -bottom-24 right-0 -z-10 h-[28rem] w-[28rem] text-cyan-300/10 sm:right-20"
-        aria-hidden="true"
-      >
-        <path d={DROP} />
-      </svg>
-      <span
-        className="pointer-events-none absolute -left-20 top-10 -z-10 h-72 w-72 rounded-full bg-cyan-300/10 blur-3xl"
-        aria-hidden="true"
-      />
+      
 
       <div className={wrap}>
         <nav aria-label="Breadcrumb" className="text-sm text-white/70">
@@ -266,14 +259,10 @@ function Hero() {
             className="inline-flex items-center gap-2 rounded-full bg-white/90 px-7 py-3.5 text-sm font-semibold text-(--primary) transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
           >
             Get a quote
-            <Icon d={ARROW} className="h-4 w-4" />
+           
           </a>
-          <a
-            href="#models"
-            className="rounded-full border border-white/25 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
-          >
-            View models
-          </a>
+         
+        
         </div>
       </div>
     </section>
@@ -624,7 +613,7 @@ export default function CommercialRoPage() {
   return (
     <main>
       <Hero />
-      <Models />
+      
       {products.map((p, i) => (
         <ProductDetail key={p.slug} product={p} index={i} />
       ))}

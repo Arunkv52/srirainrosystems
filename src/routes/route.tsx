@@ -7,6 +7,7 @@ import SparesPage from "../pages/Sparesandservices"
 import CommercialRoPage from "../pages/Commercialro"
 import Domesticro from "../pages/Domesticro"
 import Industrialro from "../pages/Industrialro"
+import WaterSofteners from "../pages/WaterSofteners"
 
 
 
@@ -22,6 +23,7 @@ const route = () => {
             <Route path="/commercialro" element={<CommercialRoPage/>} />
             <Route path="/domesticro" element={<Domesticro />} />
             <Route path='/industrialro' element={<Industrialro/>} />
+            <Route path="/watersofteners" element={<WaterSofteners />} />
         </Routes>
    </BrowserRouter>
   )

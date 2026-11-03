@@ -186,13 +186,7 @@ function ItemCard ({ item }: { item: Item }) {
         </p>
         <h3 className='mt-2 text-lg font-medium text-white'>{item.name}</h3>
         <p className='mt-1 text-sm text-white/55'>{item.segments}</p>
-        <p className='mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-cyan-300'>
-          Enquire
-          <Icon
-            d={ARROW_RIGHT}
-            className='h-4 w-4 transition-transform group-hover:translate-x-1'
-          />
-        </p>
+        
       </div>
     </a>
   )
