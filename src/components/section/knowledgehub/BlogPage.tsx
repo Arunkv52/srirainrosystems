@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import type { ChangeEvent } from "react";
+import ComingSoon from "./ComingSoon";
 
 /* =========================================================
    1. YOUR DATA  (edit this part)
@@ -60,24 +61,7 @@ const posts: Post[] = [
     date: "2026-10-08",
     readMinutes: 4,
   },
-  {
-    slug: "signs-ro-needs-service",
-    title: "5 signs your RO system needs a service visit",
-    excerpt:
-      "Low flow, odd taste, constant running and other warning signs worth acting on early.",
-    category: "Maintenance tips",
-    date: "2026-09-30",
-    readMinutes: 4,
-  },
-  {
-    slug: "amc-vs-repeated-repairs",
-    title: "Why an AMC can cost less than repeated repairs",
-    excerpt:
-      "How scheduled maintenance keeps your system performing and helps you avoid unexpected breakdowns.",
-    category: "Maintenance tips",
-    date: "2026-09-21",
-    readMinutes: 5,
-  },
+  
   {
     slug: "ro-plant-restaurant-hotel",
     title: "Choosing an RO plant for a restaurant or hotel",
@@ -87,33 +71,8 @@ const posts: Post[] = [
     date: "2026-09-12",
     readMinutes: 7,
   },
-  {
-    slug: "industrial-ro-capacity-pretreatment",
-    title: "Industrial RO: planning capacity and pre-treatment",
-    excerpt:
-      "The key questions to answer before specifying a plant for process water.",
-    category: "Commercial & industrial",
-    date: "2026-09-02",
-    readMinutes: 8,
-  },
-  {
-    slug: "hard-water-explained",
-    title: "Hard water explained: the effect on appliances and what to do",
-    excerpt:
-      "Why hard water leaves scale behind, how it affects your equipment, and the options for dealing with it.",
-    category: "RO basics",
-    date: "2026-08-24",
-    readMinutes: 5,
-  },
-  {
-    slug: "rent-or-buy-ro-equipment",
-    title: "Rent or buy? Deciding on RO equipment for short-term needs",
-    excerpt:
-      "When renting equipment makes more sense than buying, and what to ask before you decide.",
-    category: "Buying guides",
-    date: "2026-08-14",
-    readMinutes: 4,
-  },
+  
+ 
 ];
 
 /* =========================================================
@@ -304,13 +263,13 @@ function PostCard({ post }: { post: Post }) {
           {post.excerpt}
         </p>
 
-        <span className="mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-semibold text-(--primary) group-hover:text-cyan-700">
+        {/* <span className="mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-semibold text-(--primary) group-hover:text-cyan-700">
           Read more
           <Icon
             d={ICONS.arrow}
             className="h-4 w-4 transition-transform group-hover:translate-x-1"
           />
-        </span>
+        </span> */}
       </div>
     </article>
   );
@@ -500,8 +459,8 @@ export default function BlogPage() {
   return (
     <main>
       <Hero />
-      {featured && <Featured post={featured} />}
-      <ArticleList items={rest} />
+      
+      <ComingSoon />
       <CtaBand />
     </main>
   );

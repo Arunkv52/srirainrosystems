@@ -876,15 +876,8 @@ function NeedsAndCta () {
         </ol>
 
         {/* Call to action */}
-        <div className='relative isolate mt-16 overflow-hidden rounded-xs bg-gradient-to-br from-(--blue) to-(--primary) px-7 py-12 text-white sm:px-14 sm:py-16'>
-          <svg
-            viewBox='0 0 24 24'
-            fill='currentColor'
-            className='pointer-events-none absolute -bottom-16 -right-10 -z-10 h-80 w-80 text-cyan-300/10'
-            aria-hidden='true'
-          >
-            <path d={DROP} />
-          </svg>
+        <div className='relative isolate mt-16 overflow-hidden rounded-xs abt-cta px-7 py-12 text-white sm:px-14 sm:py-16'>
+         
 
           <div className='flex flex-col gap-8 md:flex-row md:items-center md:justify-between'>
             <div>

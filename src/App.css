@@ -71,7 +71,7 @@ h3 {
     color-mix(in srgb, var(--blue) 85%, transparent),
     color-mix(in srgb, var(--green) 85%, transparent)
   ),
-  url('./assets/about/banner-set.jpg');
+  url('./assets/home/elegant-modern-water-cooler-stylish-office-interior.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

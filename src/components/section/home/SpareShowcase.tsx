@@ -1,6 +1,16 @@
 import { useEffect, useRef, useState } from 'react'
 import Drink from '../../../assets/home/mom-daughter-drinks.jpg'
-import DummyImg from '../../../assets/home/closeup-view-water.jpg'
+import Housing from '../../../assets/Spares-and-services/housings-pressure-vessels.jpg'
+import RoMembranes from '../../../assets/Spares-and-services/ro-membranes.jpg'
+import RoPumps from '../../../assets/Spares-and-services/ro-pumps-motors.jpg'
+import Valves from '../../../assets/Spares-and-services/valves.jpg'
+import Spunfiter from '../../../assets/Spares-and-services/home/spun-filter.jpg'
+import Sedimant from '../../../assets/Spares-and-services/home/sedimant.jpg'
+import Corbon from '../../../assets/Spares-and-services/home/corbon.jpg'
+import Controllers from '../../../assets/Spares-and-services/home/controller.jpg'
+import Fittings from '../../../assets/Spares-and-services/home/fittings.jpg'
+
+
 
 /* =========================================================
    1. YOUR DATA  (edit this part)
@@ -29,63 +39,63 @@ const items: Item[] = [
     name: 'RO membranes',
     group: 'Filters',
     segments: 'Domestic · Commercial · Industrial',
-    image : DummyImg
+    image : RoMembranes
   },
   {
     slug: 'spun-filters',
     name: 'Spun filters',
     group: 'Filters',
     segments: 'Domestic · Commercial · Industrial',
-    image : DummyImg
+    image : Spunfiter
   },
   {
     slug: 'sediment-filters',
     name: 'Sediment filters',
     group: 'Filters',
     segments: 'Domestic · Commercial · Industrial',
-    image : DummyImg
+    image : Sedimant
   },
   {
     slug: 'carbon-filters',
     name: 'Carbon filters',
     group: 'Filters',
     segments: 'Domestic · Commercial · Industrial',
-    image : DummyImg
+    image : Corbon
   },
   {
     slug: 'housings',
     name: 'Filter housings',
     group: 'Filters',
     segments: 'Domestic · Commercial · Industrial',
-    image : DummyImg
+    image : Housing
   },
   {
     slug: 'pumps',
     name: 'Pumps',
     group: 'Parts',
     segments: 'Domestic · Commercial',
-    image : DummyImg
+    image : RoPumps
   },
   {
     slug: 'valves',
     name: 'Valves',
     group: 'Parts',
     segments: 'Domestic · Commercial',
-    image : DummyImg
+    image : Valves
   },
   {
     slug: 'controllers',
     name: 'Controllers',
     group: 'Parts',
     segments: 'Domestic · Commercial · Industrial',
-    image : DummyImg
+    image : Controllers
   },
   {
     slug: 'fittings',
     name: 'Fittings',
     group: 'Parts',
     segments: 'Domestic · Commercial · Industrial',
-    image : DummyImg
+    image : Fittings
   }
 ]
 

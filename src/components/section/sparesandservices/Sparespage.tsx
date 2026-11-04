@@ -1,3 +1,15 @@
+import Filter from '../../../assets/Spares-and-services/filter.jpg'
+import Housing from '../../../assets/Spares-and-services/housings-pressure-vessels.jpg'
+import RoMembranes from '../../../assets/Spares-and-services/ro-membranes.jpg'
+import RoPumps from '../../../assets/Spares-and-services/ro-pumps-motors.jpg'
+import TubeFittings from '../../../assets/Spares-and-services/tubes-fittings.jpg'
+import Valves from '../../../assets/Spares-and-services/valves.jpg'
+import WaterSoftener from '../../../assets/Spares-and-services/water-softener.jpg'
+import Electric from '../../../assets/Spares-and-services/industrial-water-pump.jpg'
+
+
+
+
 /* =========================================================
    1. YOUR DATA  (edit this part)
    ========================================================= */
@@ -38,6 +50,7 @@ const categories: Category[] = [
       { label: "Replacement", value: "Based on water quality and operating hours" },
     ],
     icon: "M8 3h8v18H8zM8 7h8M8 11h8M8 15h8",
+    image : Filter
   },
   {
     slug: "ro-membranes",
@@ -54,6 +67,7 @@ const categories: Category[] = [
       { label: "Key specifications", value: "Salt rejection, operating pressure, flow and dimensions" },
     ],
     icon: "M6 7a6 2.5 0 0 1 12 0v10a6 2.5 0 0 1-12 0zM6 7a6 2.5 0 0 0 12 0",
+    image : RoMembranes
   },
   {
     slug: "pumps-motors",
@@ -69,6 +83,7 @@ const categories: Category[] = [
       { label: "Accessories", value: "Pump head, motor, diaphragm and repair kit" },
     ],
     icon: "M12 5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM12 9v5M9.5 11.5h5M18.5 11.5H22M2 11.5h3.5",
+    image : RoPumps
   },
   {
     slug: "valves-switches",
@@ -84,6 +99,7 @@ const categories: Category[] = [
       { label: "Function", value: "Flow control, pressure protection and automatic operation" },
     ],
     icon: "M3 12h6M15 12h6M9 8l6 8M15 8l-6 8M12 8V4M9 4h6",
+    image : Valves
   },
   {
     slug: "electrical-electronic",
@@ -99,6 +115,8 @@ const categories: Category[] = [
       { label: "Key specifications", value: "Input voltage, output voltage, wattage and connector type" },
     ],
     icon: "M13 3L5 14h6l-1 7 8-11h-6z",
+    image : Electric
+    
   },
   {
     slug: "housings-vessels",
@@ -114,6 +132,7 @@ const categories: Category[] = [
       { label: "Application", value: "Domestic, commercial and industrial RO systems" },
     ],
     icon: "M7 3h10v4H7zM8 7h8v14H8z",
+    image : Housing
   },
   {
     slug: "tubes-fittings",
@@ -128,6 +147,7 @@ const categories: Category[] = [
       { label: "Application", value: "Domestic, commercial and industrial water lines" },
     ],
     icon: "M3 10h5v4H3zM16 10h5v4h-5zM8 8h8v8H8z",
+    image : TubeFittings
   },
   {
     slug: "softener-industrial",
@@ -149,6 +169,7 @@ const categories: Category[] = [
       },
     ],
     icon: "M3 21V10l6 3V10l6 3V6h4v15H3z",
+    image : WaterSoftener
   },
 ];
 

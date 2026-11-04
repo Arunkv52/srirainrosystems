@@ -20,43 +20,43 @@ type Product = {
 /* ---------- Sample data: replace with your real products ---------- */
 const products: Product[] = [
   {
-    id: "home-ro-8l",
-    name: "Home RO + UV + MF Water Purifier, 8 L Storage",
-    category: "Domestic RO",
-    badge: "New launch",
+    id: 'home-ro-8l',
+    name: 'Home RO + UV + MF Water Purifier, 8 L Storage',
+    category: 'Domestic RO',
+    badge: 'Popular choice',
     image: DomesticImg,
-    features: ["RO", "UV", "MF", "8 L tank"],
-    href: "/domestic-ro/home-ro-8l",
-  },
-  {
-    id: "commercial-50",
-    name: "Commercial RO Plant, 50 LPH for Offices and Shops",
-    category: "Commercial RO",
-    badge: "Popular choice",
-    image: CommercialImg,
-    features: ["50 LPH", "SS frame", "Auto flush"],
-    href: "/commercial-ro/commercial-50",
-  },
-  {
-    id: "wall-mount-7l",
-    name: "Wall-Mounted RO + UV Purifier, 7 L Storage",
-    category: "Industrial RO",
-    badge: "Popular choice",
-    image: IndustryImg,
-    features: ["RO", "UV", "Mineral", "7 L tank"],
-    href: "/domestic-ro/wall-mount-7l",
+    features: ['RO', 'UV', 'MF', '8 L tank'],
+    href: '/domestic-ro/home-ro-8l'
   },
   
   {
-    id: "industrial-250",
-    name: "Industrial RO Plant, 250 LPH Water Treatment",
-    category: "Water Softeners",
-    badge: "New launch",
-    image: WaterSoftenersImg,
-    features: ["250 LPH", "Pre-treatment", "AMC ready"],
-    href: "/industrial-ro/industrial-250",
+    id: 'commercial-50',
+    name: 'Commercial RO Plant, 50 LPH for Offices and Shops',
+    category: 'Commercial RO',
+    badge: 'Popular choice',
+    image: CommercialImg,
+    features: ['50 LPH', 'SS frame', 'Auto flush'],
+    href: '/commercial-ro/commercial-50'
   },
-];
+  {
+    id: 'industrial-250',
+    name: 'Industrial RO Plant, 250 LPH Water Treatment',
+    category: 'Industrial RO',
+    badge: 'Popular choice',
+    image: IndustryImg,
+    features: ['250 LPH', 'Pre-treatment', 'AMC ready'],
+    href: '/industrial-ro/industrial-250'
+  },
+  {
+    id: 'wall-mount-7l',
+    name: 'Hot, cold and normal water dispenser',
+    category: 'Water Softeners',
+    badge: 'Popular choice',
+    image: WaterSoftenersImg,
+    features: ['Homes', 'offices', 'shops', 'schools', 'hospitals and factories'],
+    href: '/domestic-ro/wall-mount-7l'
+  },
+]
 
 /* ---------- UI helpers ---------- */
 const badgeStyles: Record<Badge, string> = {
@@ -155,18 +155,13 @@ function ProductCard({ product }: { product: Product }) {
 
         {/* Actions pinned to the bottom so every card lines up */}
         <div className="mt-auto grid grid-cols-2 gap-2.5 border-t border-slate-100 pt-5">
-          <a
-            href={href}
-            className="inline-flex items-center justify-center gap-1.5 rounded-full border border-(--primary)/25 px-4 py-2.5 text-sm font-semibold text-(--primary) transition-colors hover:border-(--primary) hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
-          >
-            Learn more
-            <ArrowRight className="h-3.5 w-3.5" />
-          </a>
+          
           <a
             href={`/contact?product=${encodeURIComponent(id)}#demo`}
             className="inline-flex items-center justify-center rounded-full bg-(--primary) px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-(--primary)/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2"
           >
-            Book demo
+             Get a info
+            <ArrowRight className="h-3.5 w-3.5" />
           </a>
         </div>
       </div>
@@ -211,15 +206,7 @@ export default function BestSellers() {
         </ul>
 
         {/* View all */}
-        <div className="mt-12 flex justify-center">
-          <a
-            href="/products"
-            className="inline-flex items-center gap-2 rounded-full border border-(--primary) px-7 py-3 text-sm font-semibold text-(--primary) transition-colors hover:bg-(--primary) hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2"
-          >
-            View all products
-            <ArrowRight />
-          </a>
-        </div>
+       
       </div>
     </section>
   );
