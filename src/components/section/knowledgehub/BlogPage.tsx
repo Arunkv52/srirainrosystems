@@ -1,8 +1,8 @@
 import { Link } from 'react-router'
 
-const PAGE_TITLE = 'Knowledge Hub'
+const PAGE_TITLE = 'Knowledge'
 
-export default function KnowledgeHub () {
+export default function BlogPage () {
   return (
     <main>
       <section
