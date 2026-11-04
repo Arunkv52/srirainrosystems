@@ -69,7 +69,7 @@ const Herosection = () => {
               Pure Water | Healthy Life
             </p>
 
-            <h3 className='text-4xl md:font-semibold font-bold md:text-5xl md:text-(--white) text-black'>
+            <h3 className='text-4xl md:font-semibold font-bold md:text-5xl md:text-(--white) text-white'>
               Pure Water Solutions <br /> for Every Need
             </h3>
 
