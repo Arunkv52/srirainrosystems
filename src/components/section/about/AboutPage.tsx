@@ -180,7 +180,7 @@ const testimonials = [
    2. SMALL HELPERS
    ========================================================= */
 const wrap = ' px-5 md:px-8'
-const ARROW = 'M5 12h14M13 6l6 6-6 6'
+
 const CHECK = 'M5 12.5l4.5 4.5L19 7.5'
 
 function Icon ({ d, className = 'h-6 w-6' }: { d: string; className?: string }) {
@@ -498,13 +498,7 @@ function Services () {
                 <p className='mt-2 text-base leading-relaxed text-slate-600'>
                   {s.text}
                 </p>
-                <span className='mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-semibold text-(--primary) group-hover:text-cyan-700'>
-                  Learn more
-                  <Icon
-                    d={ARROW}
-                    className='h-4 w-4 transition-transform group-hover:translate-x-1'
-                  />
-                </span>
+                
               </a>
             </li>
           ))}

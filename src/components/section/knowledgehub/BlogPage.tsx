@@ -9,7 +9,7 @@ export default function KnowledgeHub () {
         aria-labelledby='blog-title'
         className='blog-hero relative isolate flex min-h-[70vh] items-center overflow-hidden px-5 pb-16 pt-36 text-white md:px-8 sm:pb-24 sm:pt-44'
       >
-        <div className='mx-auto w-full max-w-7xl'>
+        <div className='w-full'>
           <nav aria-label='Breadcrumb' className='text-sm text-white/70'>
             <ol className='flex items-center gap-2'>
               <li>

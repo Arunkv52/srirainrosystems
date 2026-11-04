@@ -71,8 +71,7 @@ const RANGE_LABEL = 'Our range'
 const homeLink = { label: 'Home', href: '/' }
 const otherLinks = [
   { label: 'About Us', href: '/about' },
-  { label: 'Knowledge Hub', href: '/knowledgehub' },
-  { label: 'Contact', href: '/contact' }
+  { label: 'Knowledge', href: '/knowledgehub' },
 ]
 
 /* ---------- Helpers ---------- */
