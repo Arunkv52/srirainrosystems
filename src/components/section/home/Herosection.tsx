@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import Video from '../../../assets/home/bg-video.mp4'
+import Video from '../../../assets/home/gemini-generate-video.mp4'
 import ButtonFill from '../../ui/ButtonFill'
 import ButtonOutline from '../../ui/ButtonOutline'
 
