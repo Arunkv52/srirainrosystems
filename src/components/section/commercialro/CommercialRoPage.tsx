@@ -193,7 +193,7 @@ const whatsappHref = (p: Product) =>
 // Product picture: your photo, or a gradient with a water drop until you add one
 function ProductImage({ product, className = "" }: { product: Product; className?: string }) {
   return (
-    <div className={`relative overflow-hidden bg-gradient-to-br from-(--blue) to-(--primary) ${className}`}>
+    <div className={`relative overflow-hidden bg-linear-to-br from-(--blue) to-(--primary) ${className}`}>
       {product.image ? (
         <img
           src={product.image}
@@ -222,7 +222,7 @@ function Hero() {
   return (
     <section
       aria-labelledby="commercial-title"
-      className="common-prod-bg relative isolate overflow-hidden bg-gradient-to-br from-(--blue) to-(--primary) pb-16 pt-36 text-white sm:pb-24 sm:pt-44"
+      className="common-prod-bg relative isolate overflow-hidden bg-linear-to-br from-(--blue) to-(--primary) pb-16 pt-36 text-white sm:pb-24 sm:pt-44"
     >
       
 
@@ -272,94 +272,94 @@ function Hero() {
 /* =========================================================
    4. SECTION: MODELS AT A GLANCE
    ========================================================= */
-function Models() {
-  return (
-    <section id="models" aria-labelledby="models-title" className="scroll-mt-24 bg-white py-20 sm:py-24">
-      <div className={wrap}>
-        <div className="mx-auto max-w-2xl text-center">
-          <div className="flex justify-center">
-            <Eyebrow>Our models</Eyebrow>
-          </div>
-          <h2
-            id="models-title"
-            className="mt-4 text-3xl font-semibold tracking-tight text-(--primary) sm:text-4xl"
-          >
-            Choose your capacity
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-slate-600">
-            Two sizes for low-volume and small commercial needs.
-          </p>
-        </div>
+// function Models() {
+//   return (
+//     <section id="models" aria-labelledby="models-title" className="scroll-mt-24 bg-white py-20 sm:py-24">
+//       <div className={wrap}>
+//         <div className="mx-auto max-w-2xl text-center">
+//           <div className="flex justify-center">
+//             <Eyebrow>Our models</Eyebrow>
+//           </div>
+//           <h2
+//             id="models-title"
+//             className="mt-4 text-3xl font-semibold tracking-tight text-(--primary) sm:text-4xl"
+//           >
+//             Choose your capacity
+//           </h2>
+//           <p className="mt-4 text-base leading-relaxed text-slate-600">
+//             Two sizes for low-volume and small commercial needs.
+//           </p>
+//         </div>
 
-        <ul className="mt-12 grid gap-6 md:grid-cols-2">
-          {products.map((p) => (
-            <li key={p.slug}>
-              <article className="group flex h-full flex-col overflow-hidden rounded-xs border border-slate-200 bg-white transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-xl hover:shadow-cyan-900/10">
-                <div className="relative">
-                  <ProductImage product={p} className="aspect-[16/10]" />
-                  <span className="absolute left-5 top-5 rounded-full bg-white/90 px-3.5 py-1 text-xs font-semibold text-(--primary) backdrop-blur">
-                    {p.badge}
-                  </span>
-                </div>
+//         <ul className="mt-12 grid gap-6 md:grid-cols-2">
+//           {products.map((p) => (
+//             <li key={p.slug}>
+//               <article className="group flex h-full flex-col overflow-hidden rounded-xs border border-slate-200 bg-white transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-xl hover:shadow-cyan-900/10">
+//                 <div className="relative">
+//                   <ProductImage product={p} className="aspect-[16/10]" />
+//                   <span className="absolute left-5 top-5 rounded-full bg-white/90 px-3.5 py-1 text-xs font-semibold text-(--primary) backdrop-blur">
+//                     {p.badge}
+//                   </span>
+//                 </div>
 
-                <div className="flex flex-1 flex-col p-7 sm:p-8">
-                  <p className="text-sm font-semibold text-cyan-700">{p.subtitle}</p>
-                  <h3 className="mt-2 text-2xl font-semibold leading-snug text-(--primary)">
-                    {p.name}
-                  </h3>
+//                 <div className="flex flex-1 flex-col p-7 sm:p-8">
+//                   <p className="text-sm font-semibold text-cyan-700">{p.subtitle}</p>
+//                   <h3 className="mt-2 text-2xl font-semibold leading-snug text-(--primary)">
+//                     {p.name}
+//                   </h3>
 
-                  {/* Key numbers */}
-                  <dl className="mt-6 grid grid-cols-2 gap-4">
-                    <div className="rounded-xs bg-slate-50 p-4">
-                      <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-                        Rated capacity
-                      </dt>
-                      <dd className="mt-1 text-3xl font-semibold text-(--primary)">{p.capacity}</dd>
-                    </div>
-                    <div className="rounded-xs bg-slate-50 p-4">
-                      <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-                        Daily output (8 h)
-                      </dt>
-                      <dd className="mt-1 text-3xl font-semibold text-(--primary)">{p.daily}</dd>
-                    </div>
-                  </dl>
-                  <p className="mt-2 text-xs text-slate-500">Daily output is theoretical, under rated conditions.</p>
+//                   {/* Key numbers */}
+//                   <dl className="mt-6 grid grid-cols-2 gap-4">
+//                     <div className="rounded-xs bg-slate-50 p-4">
+//                       <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+//                         Rated capacity
+//                       </dt>
+//                       <dd className="mt-1 text-3xl font-semibold text-(--primary)">{p.capacity}</dd>
+//                     </div>
+//                     <div className="rounded-xs bg-slate-50 p-4">
+//                       <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+//                         Daily output (8 h)
+//                       </dt>
+//                       <dd className="mt-1 text-3xl font-semibold text-(--primary)">{p.daily}</dd>
+//                     </div>
+//                   </dl>
+//                   <p className="mt-2 text-xs text-slate-500">Daily output is theoretical, under rated conditions.</p>
 
-                  <ul className="mt-5 flex flex-wrap gap-2" aria-label="Applications">
-                    {p.applications.map((a) => (
-                      <li
-                        key={a}
-                        className="rounded-full bg-cyan-50 px-3 py-1 text-xs font-medium text-cyan-800 ring-1 ring-inset ring-cyan-100"
-                      >
-                        {a}
-                      </li>
-                    ))}
-                  </ul>
+//                   <ul className="mt-5 flex flex-wrap gap-2" aria-label="Applications">
+//                     {p.applications.map((a) => (
+//                       <li
+//                         key={a}
+//                         className="rounded-full bg-cyan-50 px-3 py-1 text-xs font-medium text-cyan-800 ring-1 ring-inset ring-cyan-100"
+//                       >
+//                         {a}
+//                       </li>
+//                     ))}
+//                   </ul>
 
-                  <div className="mt-auto flex flex-wrap items-center gap-3 pt-7">
-                    <a
-                      href={`#${p.slug}`}
-                      className="inline-flex items-center gap-2 rounded-full bg-(--primary) px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-(--primary)/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2"
-                    >
-                      View specifications
-                      <Icon d="M12 5v14M6 13l6 6 6-6" className="h-4 w-4" />
-                    </a>
-                    <a
-                      href={quoteHref(p)}
-                      className="rounded-full border border-(--primary)/25 px-6 py-3 text-sm font-semibold text-(--primary) transition-colors hover:border-(--primary) hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
-                    >
-                      Get a quote
-                    </a>
-                  </div>
-                </div>
-              </article>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
-  );
-}
+//                   <div className="mt-auto flex flex-wrap items-center gap-3 pt-7">
+//                     <a
+//                       href={`#${p.slug}`}
+//                       className="inline-flex items-center gap-2 rounded-full bg-(--primary) px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-(--primary)/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2"
+//                     >
+//                       View specifications
+//                       <Icon d="M12 5v14M6 13l6 6 6-6" className="h-4 w-4" />
+//                     </a>
+//                     <a
+//                       href={quoteHref(p)}
+//                       className="rounded-full border border-(--primary)/25 px-6 py-3 text-sm font-semibold text-(--primary) transition-colors hover:border-(--primary) hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
+//                     >
+//                       Get a quote
+//                     </a>
+//                   </div>
+//                 </div>
+//               </article>
+//             </li>
+//           ))}
+//         </ul>
+//       </div>
+//     </section>
+//   );
+// }
 
 /* =========================================================
    5. SECTION: ONE PRODUCT IN DETAIL (photo, numbers, datasheet)
@@ -377,17 +377,17 @@ function ProductDetail({ product: p, index }: { product: Product; index: number 
         <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-16">
           {/* Photo and key numbers */}
           <div className={`lg:col-span-5 lg:sticky lg:top-28 ${reversed ? "lg:order-2" : ""}`}>
-            <ProductImage product={p} className="aspect-[4/3] rounded-xs shadow-xl shadow-cyan-900/10" />
+            <ProductImage product={p} className="aspect-4/3 rounded-xs shadow-xl shadow-cyan-900/10" />
 
             <dl className="mt-5 grid grid-cols-2 gap-4">
-              <div className="rounded-xs bg-gradient-to-br from-(--blue) to-(--primary) p-5 text-white">
+              <div className="rounded-xs bg-linear-to-br from-(--blue) to-(--primary) p-5 text-white">
                 <dt className="text-xs font-semibold uppercase tracking-wider text-white/70">
                   Rated capacity
                 </dt>
                 <dd className="mt-1 text-4xl font-semibold text-cyan-300">{p.capacity}</dd>
                 <p className="mt-1 text-xs text-white/70">{p.capacityNote}</p>
               </div>
-              <div className="rounded-xs bg-gradient-to-br from-(--blue) to-(--primary) p-5 text-white">
+              <div className="rounded-xs bg-linear-to-br from-(--blue) to-(--primary) p-5 text-white">
                 <dt className="text-xs font-semibold uppercase tracking-wider text-white/70">
                   Daily output
                 </dt>
@@ -480,7 +480,7 @@ function Compare() {
         </div>
 
         <div className="mt-12 overflow-x-auto rounded-xs border border-white/15 bg-white/10 backdrop-blur-sm">
-          <table className="w-full min-w-[640px] border-collapse text-left">
+          <table className="w-full min-w-160 border-collapse text-left">
             <caption className="sr-only">Comparison of the 25 LPH and 50 LPH RO systems</caption>
             <thead>
               <tr className="border-b border-white/15">

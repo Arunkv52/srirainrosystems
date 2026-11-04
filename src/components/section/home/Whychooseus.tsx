@@ -89,7 +89,7 @@ export default function WhyChooseUs() {
         <div className="grid gap-5 lg:grid-cols-12 lg:items-end">
           <h2
             id="why-title"
-            className="text-3xl font-semibold tracking-tight text-[var(--blue)] sm:text-4xl lg:col-span-7 lg:text-5xl"
+            className="text-3xl font-semibold tracking-tight text-(--blue) sm:text-4xl lg:col-span-7 lg:text-5xl"
           >
             Why choose us?
           </h2>

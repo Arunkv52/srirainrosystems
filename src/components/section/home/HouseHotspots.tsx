@@ -150,7 +150,7 @@ export default function HouseHotspots() {
 
         {/* House picture with numbered points */}
         <div className="mx-auto mt-12 max-w-4xl rounded-3xl bg-slate-50 p-4 sm:p-8">
-          <div className="relative aspect-[800/520] w-full">
+          <div className="relative aspect-800/520 w-full">
             {IMAGE ? (
               <img
                 src={IMAGE}

@@ -74,7 +74,7 @@ function TileCard({ tile }: { tile: Tile }) {
   return (
     <a
       href={tile.href}
-      className="group relative block aspect-square overflow-hidden bg-gradient-to-br from-(--blue) to-(--primary) focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-cyan-300"
+      className="group relative block aspect-square overflow-hidden bg-linear-to-br from-(--blue) to-(--primary) focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-cyan-300"
     >
       {/* Photo fills the whole card (the text bar sits on top of it) */}
       {tile.image ? (

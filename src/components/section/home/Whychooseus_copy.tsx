@@ -73,7 +73,7 @@ function Icon({ d, className = "h-6 w-6" }: { d: string; className?: string }) {
    ========================================================= */
 function PhotoCard() {
   return (
-    <div className="relative flex min-h-[420px] flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-(--blue) to-(--primary) p-6 sm:col-span-2 lg:col-span-1 lg:row-span-2 lg:min-h-0">
+    <div className="relative flex min-h-105 flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-linear-to-b from-(--blue) to-(--primary) p-6 sm:col-span-2 lg:col-span-1 lg:row-span-2 lg:min-h-0">
       {IMAGE ? (
         <img
           src={IMAGE}
@@ -95,7 +95,7 @@ function PhotoCard() {
 
       {/* Dark fade so the white text is always readable on a photo */}
       <div
-        className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-black/35"
+        className="absolute inset-0 bg-linear-to-t from-black/70 via-black/25 to-black/35"
         aria-hidden="true"
       />
 

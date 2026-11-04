@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Aqua2090Img from '../../../assets/Products/Domestic/Aqua 2090/Images-1.jpeg'
 import AquaEraImg from '../../../assets/Products/Domestic/Era/Charcoal black.jpeg'
 import AquaFonixImg from '../../../assets/Products/Domestic/Fonix/WhatsApp Image 2026-09-03 at 12.54.15 (1).jpeg'
@@ -67,7 +67,6 @@ const models: Model[] = [
       maxTds: 'Up to 2,000 ppm',
       installation: 'Wall-mounted / countertop'
     },
-    image: Aqua2090Img,
     image: Aqua2090Img,
     specGroups: [
       {
@@ -707,7 +706,7 @@ function Hero () {
   return (
     <section
       aria-labelledby='domestic-title'
-      className='common-prod-bg relative isolate overflow-hidden bg-gradient-to-br from-(--blue) to-(--primary) pb-16 pt-36 text-white sm:pb-24 sm:pt-44'
+      className='common-prod-bg relative isolate overflow-hidden bg-linear-to-br from-(--blue) to-(--primary) pb-16 pt-36 text-white sm:pb-24 sm:pt-44'
     >
       <span
         className='pointer-events-none absolute -left-20 top-10 -z-10 h-72 w-72 bg-cyan-300/10 blur-3xl'
@@ -759,144 +758,144 @@ function Hero () {
 /* =========================================================
    4. SECTION: FIND A MODEL (filter chips + cards)
    ========================================================= */
-function Finder ({ onSelect }: { onSelect: (slug: string) => void }) {
-  const [filter, setFilter] = useState<'All' | Tech>('All')
+// function Finder ({ onSelect }: { onSelect: (slug: string) => void }) {
+//   const [filter, setFilter] = useState<'All' | Tech>('All')
 
-  const shown = useMemo(
-    () =>
-      filter === 'All' ? models : models.filter(m => m.tags.includes(filter)),
-    [filter]
-  )
+//   const shown = useMemo(
+//     () =>
+//       filter === 'All' ? models : models.filter(m => m.tags.includes(filter)),
+//     [filter]
+//   )
 
-  const chip = (on: boolean) =>
-    `border px-4 py-2 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 ${
-      on
-        ? 'border-(--primary) bg-(--primary) text-white'
-        : 'border-slate-300 bg-white text-slate-700 hover:border-(--primary) hover:text-(--primary)'
-    }`
+//   const chip = (on: boolean) =>
+//     `border px-4 py-2 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 ${
+//       on
+//         ? 'border-(--primary) bg-(--primary) text-white'
+//         : 'border-slate-300 bg-white text-slate-700 hover:border-(--primary) hover:text-(--primary)'
+//     }`
 
-  return (
-    <section
-      id='models'
-      aria-labelledby='models-title'
-      className='scroll-mt-24 bg-white py-20 sm:py-24'
-    >
-      <div className={wrap}>
-        <div className='mx-auto max-w-2xl text-center'>
-          <div className='flex justify-center'>
-            <Eyebrow>Our range</Eyebrow>
-          </div>
-          <h2
-            id='models-title'
-            className='mt-4 text-3xl font-semibold tracking-tight text-(--primary) sm:text-4xl'
-          >
-            Find the right purifier
-          </h2>
-          <p className='mt-4 text-base leading-relaxed text-slate-600'>
-            Filter by the technology you want, then open a model to see its full
-            specifications.
-          </p>
-        </div>
+//   return (
+//     <section
+//       id='models'
+//       aria-labelledby='models-title'
+//       className='scroll-mt-24 bg-white py-20 sm:py-24'
+//     >
+//       <div className={wrap}>
+//         <div className='mx-auto max-w-2xl text-center'>
+//           <div className='flex justify-center'>
+//             <Eyebrow>Our range</Eyebrow>
+//           </div>
+//           <h2
+//             id='models-title'
+//             className='mt-4 text-3xl font-semibold tracking-tight text-(--primary) sm:text-4xl'
+//           >
+//             Find the right purifier
+//           </h2>
+//           <p className='mt-4 text-base leading-relaxed text-slate-600'>
+//             Filter by the technology you want, then open a model to see its full
+//             specifications.
+//           </p>
+//         </div>
 
-        {/* Filter chips */}
-        <div
-          role='group'
-          aria-label='Filter by technology'
-          className='mt-10 flex flex-wrap justify-center gap-2'
-        >
-          {(['All', ...techOptions] as const).map(t => (
-            <button
-              key={t}
-              type='button'
-              aria-pressed={filter === t}
-              onClick={() => setFilter(t)}
-              className={chip(filter === t)}
-            >
-              {t === 'All' ? 'All models' : t}
-            </button>
-          ))}
-        </div>
-        <p
-          className='mt-4 text-center text-sm text-slate-500'
-          role='status'
-          aria-live='polite'
-        >
-          Showing {shown.length} of {models.length} models
-          {filter !== 'All' &&
-            ' · some options are available on selected variants only'}
-        </p>
+//         {/* Filter chips */}
+//         <div
+//           role='group'
+//           aria-label='Filter by technology'
+//           className='mt-10 flex flex-wrap justify-center gap-2'
+//         >
+//           {(['All', ...techOptions] as const).map(t => (
+//             <button
+//               key={t}
+//               type='button'
+//               aria-pressed={filter === t}
+//               onClick={() => setFilter(t)}
+//               className={chip(filter === t)}
+//             >
+//               {t === 'All' ? 'All models' : t}
+//             </button>
+//           ))}
+//         </div>
+//         <p
+//           className='mt-4 text-center text-sm text-slate-500'
+//           role='status'
+//           aria-live='polite'
+//         >
+//           Showing {shown.length} of {models.length} models
+//           {filter !== 'All' &&
+//             ' · some options are available on selected variants only'}
+//         </p>
 
-        {/* Cards */}
-        <ul className='mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
-          {shown.map(m => (
-            <li key={m.slug}>
-              <article className='group flex h-full flex-col overflow-hidden rounded-xs border border-slate-200 bg-white transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-xl hover:shadow-cyan-900/10'>
-                <ModelImage model={m} className='aspect-[4/3]' />
+//         {/* Cards */}
+//         <ul className='mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+//           {shown.map(m => (
+//             <li key={m.slug}>
+//               <article className='group flex h-full flex-col overflow-hidden rounded-xs border border-slate-200 bg-white transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-xl hover:shadow-cyan-900/10'>
+//                 <ModelImage model={m} className='aspect-4/3' />
 
-                <div className='flex flex-1 flex-col p-6'>
-                  <h3 className='text-xl font-semibold text-(--primary)'>
-                    {m.name}
-                  </h3>
-                  <p className='mt-1 text-sm text-slate-600'>{m.tagline}</p>
+//                 <div className='flex flex-1 flex-col p-6'>
+//                   <h3 className='text-xl font-semibold text-(--primary)'>
+//                     {m.name}
+//                   </h3>
+//                   <p className='mt-1 text-sm text-slate-600'>{m.tagline}</p>
 
-                  <dl className='mt-5 grid grid-cols-2 gap-3'>
-                    <div className='rounded-xl bg-slate-50 p-3'>
-                      <dt className='text-[11px] font-semibold uppercase tracking-wider text-slate-500'>
-                        Capacity
-                      </dt>
-                      <dd className='mt-0.5 text-sm font-semibold text-(--primary)'>
-                        {m.facts.capacity}
-                      </dd>
-                    </div>
-                    <div className='rounded-xl bg-slate-50 p-3'>
-                      <dt className='text-[11px] font-semibold uppercase tracking-wider text-slate-500'>
-                        Storage
-                      </dt>
-                      <dd className='mt-0.5 text-sm font-semibold text-(--primary)'>
-                        {m.facts.storage}
-                      </dd>
-                    </div>
-                  </dl>
+//                   <dl className='mt-5 grid grid-cols-2 gap-3'>
+//                     <div className='rounded-xl bg-slate-50 p-3'>
+//                       <dt className='text-[11px] font-semibold uppercase tracking-wider text-slate-500'>
+//                         Capacity
+//                       </dt>
+//                       <dd className='mt-0.5 text-sm font-semibold text-(--primary)'>
+//                         {m.facts.capacity}
+//                       </dd>
+//                     </div>
+//                     <div className='rounded-xl bg-slate-50 p-3'>
+//                       <dt className='text-[11px] font-semibold uppercase tracking-wider text-slate-500'>
+//                         Storage
+//                       </dt>
+//                       <dd className='mt-0.5 text-sm font-semibold text-(--primary)'>
+//                         {m.facts.storage}
+//                       </dd>
+//                     </div>
+//                   </dl>
 
-                  <ul
-                    className='mt-4 flex flex-wrap gap-1.5'
-                    aria-label='Technology'
-                  >
-                    {['RO', ...m.tags].map(t => (
-                      <li
-                        key={t}
-                        className='rounded-full bg-cyan-50 px-2.5 py-0.5 text-xs font-medium text-cyan-800 ring-1 ring-inset ring-cyan-100'
-                      >
-                        {t}
-                      </li>
-                    ))}
-                  </ul>
+//                   <ul
+//                     className='mt-4 flex flex-wrap gap-1.5'
+//                     aria-label='Technology'
+//                   >
+//                     {['RO', ...m.tags].map(t => (
+//                       <li
+//                         key={t}
+//                         className='rounded-full bg-cyan-50 px-2.5 py-0.5 text-xs font-medium text-cyan-800 ring-1 ring-inset ring-cyan-100'
+//                       >
+//                         {t}
+//                       </li>
+//                     ))}
+//                   </ul>
 
-                  <div className='mt-auto flex items-center gap-2 pt-6'>
-                    <button
-                      type='button'
-                      onClick={() => onSelect(m.slug)}
-                      className='inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-(--primary) px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-(--primary)/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2'
-                    >
-                      View details
-                      <Icon d={ARROW} className='h-4 w-4' />
-                    </button>
-                    <a
-                      href={quoteHref(m)}
-                      className='rounded-full border border-(--primary)/25 px-4 py-2.5 text-sm font-semibold text-(--primary) transition-colors hover:border-(--primary) hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500'
-                    >
-                      Quote
-                    </a>
-                  </div>
-                </div>
-              </article>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
-  )
-}
+//                   <div className='mt-auto flex items-center gap-2 pt-6'>
+//                     <button
+//                       type='button'
+//                       onClick={() => onSelect(m.slug)}
+//                       className='inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-(--primary) px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-(--primary)/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2'
+//                     >
+//                       View details
+//                       <Icon d={ARROW} className='h-4 w-4' />
+//                     </button>
+//                     <a
+//                       href={quoteHref(m)}
+//                       className='rounded-full border border-(--primary)/25 px-4 py-2.5 text-sm font-semibold text-(--primary) transition-colors hover:border-(--primary) hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500'
+//                     >
+//                       Quote
+//                     </a>
+//                   </div>
+//                 </div>
+//               </article>
+//             </li>
+//           ))}
+//         </ul>
+//       </div>
+//     </section>
+//   )
+// }
 
 /* =========================================================
    5. SECTION: MODEL DETAILS (one model at a time)
@@ -927,7 +926,7 @@ function Details ({
         <div
           role='tablist'
           aria-label='Choose a model'
-          className='-mx-5 flex gap-2 overflow-x-auto px-5 pb-2 sm:mx-0 sm:flex-wrap sm:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden'
+          className='-mx-5 flex gap-2 overflow-x-auto px-5 pb-2 sm:mx-0 sm:flex-wrap sm:px-0 scrollbar-none [&::-webkit-scrollbar]:hidden'
         >
           {models.map((x, i) => (
             <button
@@ -952,11 +951,11 @@ function Details ({
           <div className='lg:sticky lg:top-28 lg:col-span-5'>
             <ModelImage
               model={m}
-              className='aspect-[4/3] rounded-xs shadow-xl shadow-cyan-900/10'
+              className='aspect-4/3 rounded-xs shadow-xl shadow-cyan-900/10'
             />
 
             <dl className='mt-5 grid grid-cols-2 gap-4'>
-              <div className='rounded-xs bg-gradient-to-br from-(--blue) to-(--primary) p-5 text-white'>
+              <div className='rounded-xs bg-linear-to-br from-(--blue) to-(--primary) p-5 text-white'>
                 <dt className='text-xs font-semibold uppercase tracking-wider text-white/70'>
                   Capacity
                 </dt>
@@ -964,7 +963,7 @@ function Details ({
                   {m.facts.capacity}
                 </dd>
               </div>
-              <div className='rounded-xs bg-gradient-to-br from-(--blue) to-(--primary) p-5 text-white'>
+              <div className='rounded-xs bg-linear-to-br from-(--blue) to-(--primary) p-5 text-white'>
                 <dt className='text-xs font-semibold uppercase tracking-wider text-white/70'>
                   Storage
                 </dt>
@@ -1146,7 +1145,7 @@ function Compare ({ onSelect }: { onSelect: (slug: string) => void }) {
         </div>
 
         <div className='mt-12 overflow-x-auto rounded-xs border border-white/15 bg-white/10 backdrop-blur-sm'>
-          <table className='w-full min-w-[900px] border-collapse text-left'>
+          <table className='w-full min-w-225 border-collapse text-left'>
             <caption className='sr-only'>
               Comparison of domestic RO water purifier models
             </caption>

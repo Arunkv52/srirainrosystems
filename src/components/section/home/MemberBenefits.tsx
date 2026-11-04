@@ -1,4 +1,3 @@
-import { Link } from 'react-router'
 import Image from '../../../assets/home/family-filter.jpg'
 
 type OfferCardProps = {

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import Video from '../../../assets/home/0_Experiment_Tablet_1280x720.mp4'
+import Video from '../../../assets/home/bg-video.mp4'
 import ButtonFill from '../../ui/ButtonFill'
 import ButtonOutline from '../../ui/ButtonOutline'
 

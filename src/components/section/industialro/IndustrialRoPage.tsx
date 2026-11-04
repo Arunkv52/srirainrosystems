@@ -18,7 +18,6 @@ const WHATSAPP_NUMBER = "919999999999"; // country code + number, no "+"
 //   import PlantImg from "../assets/industrial/ro-plant.jpg";
 //   const PLANT_IMAGE = PlantImg;
 // Until then, a gradient with a water drop is shown.
-const PLANT_IMAGE = "";
 
 type Spec = { label: string; value: string };
 
@@ -330,7 +329,7 @@ function Picture({
   label?: string;
 }) {
   return (
-    <div className={`relative overflow-hidden bg-gradient-to-br from-(--blue) to-(--primary) ${className}`}>
+    <div className={`relative overflow-hidden bg-linear-to-br from-(--blue) to-(--primary) ${className}`}>
       {src ? (
         <img src={src} alt={alt} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
       ) : (
@@ -361,7 +360,7 @@ function Hero() {
   return (
     <section
       aria-labelledby="industrial-title"
-      className="common-prod-bg relative isolate overflow-hidden bg-gradient-to-br from-(--blue) to-(--primary) pb-16 pt-36 text-white sm:pb-24 sm:pt-44"
+      className="common-prod-bg relative isolate overflow-hidden bg-linear-to-br from-(--blue) to-(--primary) pb-16 pt-36 text-white sm:pb-24 sm:pt-44"
     >
      
 
@@ -474,7 +473,7 @@ function PlantOverview() {
 
          
           <img src={IndustryImg} alt="Industrial RO plant"
-            className="aspect-[4/3] rounded-xs shadow-xl shadow-cyan-900/10" />
+            className="aspect-4/3 rounded-xs shadow-xl shadow-cyan-900/10" />
         </div>
       </div>
     </section>
@@ -516,7 +515,7 @@ function Capacity() {
               {/* Rising bar */}
               <div className="flex h-44 items-end" aria-hidden="true">
                 <div
-                  className={`w-full rounded-t-xl bg-gradient-to-t from-(--primary) to-cyan-400 transition-all duration-500 group-hover:opacity-90 ${barHeights[i]}`}
+                  className={`w-full rounded-t-xl bg-linear-to-t from-(--primary) to-cyan-400 transition-all duration-500 group-hover:opacity-90 ${barHeights[i]}`}
                 />
               </div>
               <p className="mt-5 text-3xl font-semibold leading-none text-(--primary)">
@@ -696,7 +695,7 @@ function Rainwater() {
             <li key={m.name}>
               <article className="group flex h-full flex-col overflow-hidden rounded-xs border border-slate-200 bg-white transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-xl hover:shadow-cyan-900/10">
                 <div className="relative">
-                  <Picture src={m.image} alt={m.name} label={m.name} className="aspect-[16/10]" />
+                  <Picture src={m.image} alt={m.name} label={m.name} className="aspect-16/10" />
                   <span className="absolute left-5 top-5 rounded-full bg-white/90 px-3.5 py-1 text-xs font-semibold text-(--primary) backdrop-blur">
                     {m.roof}
                   </span>
@@ -788,7 +787,7 @@ function Dispensers() {
           {dispenserTaps.map((t) => (
             <li
               key={t.name}
-              className={`rounded-xs bg-gradient-to-br ${t.gradient} p-7 text-white shadow-lg shadow-slate-900/10`}
+              className={`rounded-xs bg-linear-to-br ${t.gradient} p-7 text-white shadow-lg shadow-slate-900/10`}
             >
               <div className="flex items-start justify-between">
                 <div>
@@ -826,7 +825,7 @@ function Dispensers() {
             <li key={c.name}>
               <article className="group flex h-full flex-col overflow-hidden rounded-xs border border-slate-200 bg-white transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-xl hover:shadow-cyan-900/10">
                 <div className="relative">
-                  <Picture src={c.image} alt={c.name} label={c.name} className="aspect-[16/10]" />
+                  <Picture src={c.image} alt={c.name} label={c.name} className="aspect-16/10" />
                   <span className="absolute left-5 top-5 rounded-full bg-white/90 px-3.5 py-1 text-xs font-semibold text-(--primary) backdrop-blur">
                     {c.tag}
                   </span>

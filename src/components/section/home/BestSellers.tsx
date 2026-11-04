@@ -105,7 +105,7 @@ function ProductCard({ product }: { product: Product }) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-xl hover:shadow-cyan-900/10">
       {/* Image */}
-      <div className="relative grid aspect-[4/3.2] place-items-center overflow-hidden bg-gradient-to-b from-slate-50 to-slate-100 p-6">
+      <div className="relative grid aspect-[4/3.2] place-items-center overflow-hidden bg-linear-to-b from-slate-50 to-slate-100 p-6">
         {badge && (
           <span
             className={`absolute left-4 top-4 z-10 rounded-full px-3 py-1 text-xs font-semibold ring-1 ring-inset ${badgeStyles[badge]}`}

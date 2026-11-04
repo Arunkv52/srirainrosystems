@@ -133,7 +133,7 @@ const ARROW_RIGHT = 'M9 6l6 6-6 6'
 // The first tall card (like "Fresh. Trendy. Now." in your screenshot)
 function PromoCard () {
   return (
-    <div className='relative flex w-[260px] shrink-0 snap-start flex-col justify-between overflow-hidden rounded-sm border border-white/10 bg-gradient-to-b from-[#12424a] to-[#0b2a30] p-4 sm:w-[288px]'>
+    <div className='relative flex w-65 shrink-0 snap-start flex-col justify-between overflow-hidden rounded-sm border border-white/10 bg-linear-to-b from-[#12424a] to-[#0b2a30] p-4 sm:w-[288px]'>
       {/* Decorative water drop in the background */}
       
       <img src={Drink}
@@ -175,10 +175,10 @@ function ItemCard ({ item }: { item: Item }) {
   return (
     <a
       href={`/spares-service/${item.slug}`}
-      className='group block w-[260px] shrink-0 snap-start focus-visible:outline-none sm:w-[288px]'
+      className='group block w-65 shrink-0 snap-start focus-visible:outline-none sm:w-[288px]'
     >
       {/* Image box (square) */}
-      <div className='grid aspect-square place-items-center overflow-hidden rounded-sm bg-gradient-to-br from-[#16383f] to-[#0c2227] ring-cyan-300 group-focus-visible:ring-2'>
+      <div className='grid aspect-square place-items-center overflow-hidden rounded-sm bg-linear-to-br from-[#16383f] to-[#0c2227] ring-cyan-300 group-focus-visible:ring-2'>
         
           <img
             src={item.image}
@@ -250,7 +250,7 @@ export default function SparesCarousel () {
   return (
     <section
       aria-labelledby='spares-title'
-      className='bg-gradient-to-br from-(--blue) to-(--primary) py-16 text-white sm:py-24'
+      className='bg-linear-to-br from-(--blue) to-(--primary) py-16 text-white sm:py-24'
     >
       <div className='px-5 md:px-8'>
         {/* ---- Top: title on the left, tabs on the right ---- */}
@@ -292,7 +292,7 @@ export default function SparesCarousel () {
         <div
           ref={trackRef}
           onScroll={updateBar}
-          className='mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden'
+          className='mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-2 scrollbar-none [&::-webkit-scrollbar]:hidden'
         >
           <PromoCard />
           {visible.map(item => (

@@ -16,7 +16,6 @@ const WHATSAPP_NUMBER = '919999999999' // country code + number, no "+"
 //   import SoftenerImg from "../assets/softeners/softener.jpg";
 //   const INTRO_IMAGE = SoftenerImg;
 // Until then, a gradient with a water drop is shown.
-const INTRO_IMAGE = ''
 
 type Spec = { label: string; value: string }
 
@@ -363,7 +362,7 @@ function Picture ({
 }) {
   return (
     <div
-      className={`relative overflow-hidden bg-gradient-to-br from-(--blue) to-(--primary) ${className}`}
+      className={`relative overflow-hidden bg-linear-to-br from-(--blue) to-(--primary) ${className}`}
     >
       {src ? (
         <img
@@ -400,7 +399,7 @@ function Hero () {
   return (
     <section
       aria-labelledby='softener-title'
-      className='common-prod-bg relative isolate overflow-hidden bg-gradient-to-br from-(--blue) to-(--primary) pb-16 pt-36 text-white sm:pb-24 sm:pt-44'
+      className='common-prod-bg relative isolate overflow-hidden bg-linear-to-br from-(--blue) to-(--primary) pb-16 pt-36 text-white sm:pb-24 sm:pt-44'
     >
       <div className={wrap}>
         <nav aria-label='Breadcrumb' className='text-sm text-white/70'>
@@ -462,7 +461,6 @@ function Intro () {
           <img
             src={Image1}
             alt='Water softener system'
-            label='Water softener'
             className=' rounded-xs shadow-xl shadow-cyan-900/10'
           />
 
@@ -599,10 +597,10 @@ function Solutions () {
               src={t.image}
               alt={t.name}
               label={t.name}
-              className='aspect-[4/3] rounded-xs'
+              className='aspect-4/3 rounded-xs'
             />
 
-            <div className='mt-5 rounded-xs bg-gradient-to-br from-(--blue) to-(--primary) p-6 text-white'>
+            <div className='mt-5 rounded-xs bg-linear-to-br from-(--blue) to-(--primary) p-6 text-white'>
               <p className='text-xs font-semibold uppercase tracking-wider text-white/70'>
                 Treatment capacity
               </p>

@@ -25,15 +25,45 @@ const ICONS = {
   menu: 'M4 6h16M4 12h16M4 18h16'
 } as const
 
-type MenuItem = { label: string; description: string; href: string; image: string }
+type MenuItem = {
+  label: string
+  description: string
+  href: string
+  image: string
+}
 
 // Items shown in the dropdown panel.
 const rangeItems: MenuItem[] = [
-  { label: 'Domestic RO', description: 'Home water purifiers', href: '/domesticro', image: DomesticRoImg },
-  { label: 'Commercial RO', description: 'Offices, shops, hotels', href: '/commercialro', image: CommercialRoImg },
-  { label: 'Industrial RO', description: 'Industrial water treatment', href: '/industrialro', image: IndustrialRoImg },
-  { label: 'Water Softeners', description: 'Solutions for all sectors', href: '/watersofteners', image: WaterSoftenersImg },
-  { label: 'Spares & Service', description: 'Filters, membranes, AMC', href: '/sparesandservices', image: SparesandServiceslRoImg }
+  {
+    label: 'Domestic RO',
+    description: 'Home water purifiers',
+    href: '/domesticro',
+    image: DomesticRoImg
+  },
+  {
+    label: 'Commercial RO',
+    description: 'Offices, shops, hotels',
+    href: '/commercialro',
+    image: CommercialRoImg
+  },
+  {
+    label: 'Industrial RO',
+    description: 'Industrial water treatment',
+    href: '/industrialro',
+    image: IndustrialRoImg
+  },
+  {
+    label: 'Water Softeners',
+    description: 'Solutions for all sectors',
+    href: '/watersofteners',
+    image: WaterSoftenersImg
+  },
+  {
+    label: 'Spares & Service',
+    description: 'Filters, membranes, AMC',
+    href: '/sparesandservices',
+    image: SparesandServiceslRoImg
+  }
 ]
 
 const RANGE_LABEL = 'Our range'
@@ -48,14 +78,23 @@ const otherLinks = [
 /* ---------- Helpers ---------- */
 function Icon ({ d, className = 'h-5 w-5' }: { d: string; className?: string }) {
   return (
-    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth={1.7}
-      strokeLinecap='round' strokeLinejoin='round' className={className} aria-hidden='true'>
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.7}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      className={className}
+      aria-hidden='true'
+    >
       <path d={d} />
     </svg>
   )
 }
 
-const focusRing = 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--primary)'
+const focusRing =
+  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--primary)'
 const linkClass = `rounded-full px-4 py-2 text-sm font-medium text-black/80 transition-colors hover:bg-black/5 hover:text-black ${focusRing}`
 const outlineBtn = `items-center gap-2 rounded-full border border-black/15 px-3 py-2 text-sm font-medium text-black transition-colors hover:bg-black/5 ${focusRing}`
 
@@ -76,7 +115,9 @@ export default function Navbar () {
     setMobileOpen(false)
     if (hash) {
       requestAnimationFrame(() =>
-        document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: 'smooth' })
+        document
+          .getElementById(hash.slice(1))
+          ?.scrollIntoView({ behavior: 'smooth' })
       )
     }
   }, [pathname, hash])
@@ -138,7 +179,9 @@ export default function Navbar () {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const whatsappHref = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(WHATSAPP_TEXT)}`
+  const whatsappHref = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
+    WHATSAPP_TEXT
+  )}`
 
   return (
     <header
@@ -154,7 +197,8 @@ export default function Navbar () {
         onPointerLeave={e => e.pointerType === 'mouse' && setRangeOpen(false)}
         // Keyboard: close the dropdown when focus leaves the navbar.
         onBlur={e => {
-          if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setRangeOpen(false)
+          if (!e.currentTarget.contains(e.relatedTarget as Node | null))
+            setRangeOpen(false)
         }}
       >
         {/* ===== Top bar ===== */}
@@ -169,46 +213,74 @@ export default function Navbar () {
           {/* Desktop links */}
           <ul className='hidden items-center gap-1 lg:flex'>
             <li>
-              <Link to={homeLink.href} className={linkClass}>{homeLink.label}</Link>
+              <Link to={homeLink.href} className={linkClass}>
+                {homeLink.label}
+              </Link>
             </li>
 
-            <li onPointerEnter={e => e.pointerType === 'mouse' && setRangeOpen(true)}>
+            <li
+              onPointerEnter={e =>
+                e.pointerType === 'mouse' && setRangeOpen(true)
+              }
+            >
               <button
                 type='button'
                 aria-expanded={rangeOpen}
                 aria-controls='range-panel'
-                onPointerDown={e => { pointer.current = e.pointerType }}
+                onPointerDown={e => {
+                  pointer.current = e.pointerType
+                }}
                 onClick={e =>
                   // Mouse click keeps the hover-opened panel open; touch/keyboard toggles.
-                  setRangeOpen(v => (e.detail > 0 && pointer.current === 'mouse' ? true : !v))
+                  setRangeOpen(v =>
+                    e.detail > 0 && pointer.current === 'mouse' ? true : !v
+                  )
                 }
-                className={`${linkClass} flex items-center gap-1.5 ${rangeOpen ? 'bg-black/5 text-black' : ''}`}
+                className={`${linkClass} flex items-center gap-1.5 ${
+                  rangeOpen ? 'bg-black/5 text-black' : ''
+                }`}
               >
                 {RANGE_LABEL}
-                <Icon d={ICONS.chevron} className={`h-4 w-4 transition-transform ${rangeOpen ? 'rotate-180' : ''}`} />
+                <Icon
+                  d={ICONS.chevron}
+                  className={`h-4 w-4 transition-transform ${
+                    rangeOpen ? 'rotate-180' : ''
+                  }`}
+                />
               </button>
             </li>
 
             {otherLinks.map(l => (
               <li key={l.href}>
-                <Link to={l.href} className={linkClass}>{l.label}</Link>
+                <Link to={l.href} className={linkClass}>
+                  {l.label}
+                </Link>
               </li>
             ))}
           </ul>
 
           {/* Header buttons */}
           <div className='flex items-center gap-2'>
-            <a href={whatsappHref} target='_blank' rel='noopener noreferrer' aria-label='WhatsApp'
-              className={`hidden sm:flex ${outlineBtn}`}>
+            <a
+              href={whatsappHref}
+              target='_blank'
+              rel='noopener noreferrer'
+              aria-label='WhatsApp'
+              className={`hidden sm:flex ${outlineBtn}`}
+            >
               <BsWhatsapp />
               <span className='hidden xl:inline'>WhatsApp</span>
             </a>
-            <a href={`tel:${PHONE}`} aria-label='Call now' className={`hidden sm:flex ${outlineBtn}`}>
+            <a
+              href={`tel:${PHONE}`}
+              aria-label='Call now'
+              className={`hidden sm:flex ${outlineBtn}`}
+            >
               <MdWifiCalling3 />
               <span className='hidden xl:inline'>Call Now</span>
             </a>
             <Link
-              to='/contact#quote'
+              to='/contact'
               className='rounded-full bg-(--blue) px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-(--primary) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--primary) focus-visible:ring-offset-2'
             >
               Get a Quote
@@ -232,7 +304,9 @@ export default function Navbar () {
         <div
           id='range-panel'
           className={`absolute inset-x-0 top-full hidden pt-2 transition-all duration-200 lg:block ${
-            rangeOpen ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-1 opacity-0'
+            rangeOpen
+              ? 'visible translate-y-0 opacity-100'
+              : 'invisible -translate-y-1 opacity-0'
           }`}
         >
           <div className='rounded-sm border border-black/10 bg-white p-3 shadow-2xl shadow-black/20'>
@@ -244,10 +318,18 @@ export default function Navbar () {
                     tabIndex={rangeOpen ? 0 : -1}
                     className={`group flex h-full flex-col gap-3 rounded-2xl p-4 transition-colors hover:bg-black/5 ${focusRing}`}
                   >
-                    <img src={item.image} alt='' className='h-full w-full object-cover' />
+                    <img
+                      src={item.image}
+                      alt=''
+                      className='h-full w-full object-cover'
+                    />
                     <span>
-                      <span className='block text-base font-semibold text-black'>{item.label}</span>
-                      <span className='mt-0.5 block text-sm text-black/60'>{item.description}</span>
+                      <span className='block text-base font-semibold text-black'>
+                        {item.label}
+                      </span>
+                      <span className='mt-0.5 block text-sm text-black/60'>
+                        {item.description}
+                      </span>
                     </span>
                   </Link>
                 </li>
@@ -257,22 +339,41 @@ export default function Navbar () {
         </div>
 
         {/* ===== Mobile panel ===== */}
-        <div id='mobile-panel' className={`absolute inset-x-0 top-full pt-2 lg:hidden ${mobileOpen ? 'block' : 'hidden'}`}>
+        <div
+          id='mobile-panel'
+          className={`absolute inset-x-0 top-full pt-2 lg:hidden ${
+            mobileOpen ? 'block' : 'hidden'
+          }`}
+        >
           <div className='max-h-[80vh] overflow-y-auto rounded-xs border border-black/10 bg-white p-3 shadow-2xl shadow-black/20'>
             <ul className='flex flex-col'>
               <li>
-                <Link to={homeLink.href} className='block rounded-2xl px-4 py-3 text-base font-medium text-black hover:bg-black/5'>
+                <Link
+                  to={homeLink.href}
+                  className='block rounded-2xl px-4 py-3 text-base font-medium text-black hover:bg-black/5'
+                >
                   {homeLink.label}
                 </Link>
               </li>
 
               {rangeItems.map(item => (
                 <li key={item.href}>
-                  <Link to={item.href} className='flex items-center gap-3 rounded-2xl px-4 py-3 hover:bg-black/5'>
-                    <img src={item.image} alt='' className='h-12 w-12 shrink-0 rounded-lg object-cover' />
+                  <Link
+                    to={item.href}
+                    className='flex items-center gap-3 rounded-2xl px-4 py-3 hover:bg-black/5'
+                  >
+                    <img
+                      src={item.image}
+                      alt=''
+                      className='h-12 w-12 shrink-0 rounded-lg object-cover'
+                    />
                     <span>
-                      <span className='block text-base font-medium text-black'>{item.label}</span>
-                      <span className='block text-sm text-black/60'>{item.description}</span>
+                      <span className='block text-base font-medium text-black'>
+                        {item.label}
+                      </span>
+                      <span className='block text-sm text-black/60'>
+                        {item.description}
+                      </span>
                     </span>
                   </Link>
                 </li>
@@ -280,7 +381,10 @@ export default function Navbar () {
 
               {otherLinks.map(l => (
                 <li key={l.href}>
-                  <Link to={l.href} className='block rounded-2xl px-4 py-3 text-base font-medium text-black hover:bg-black/5'>
+                  <Link
+                    to={l.href}
+                    className='block rounded-2xl px-4 py-3 text-base font-medium text-black hover:bg-black/5'
+                  >
                     {l.label}
                   </Link>
                 </li>
@@ -288,12 +392,18 @@ export default function Navbar () {
             </ul>
 
             <div className='mt-3 grid grid-cols-2 gap-2 border-t border-black/10 pt-3'>
-              <a href={whatsappHref} target='_blank' rel='noopener noreferrer'
-                className='flex items-center justify-center gap-2 rounded-full border border-black/15 py-2.5 text-sm font-medium text-black hover:bg-black/5'>
+              <a
+                href={whatsappHref}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='flex items-center justify-center gap-2 rounded-full border border-black/15 py-2.5 text-sm font-medium text-black hover:bg-black/5'
+              >
                 <BsWhatsapp /> WhatsApp
               </a>
-              <a href={`tel:${PHONE}`}
-                className='flex items-center justify-center gap-2 rounded-full border border-black/15 py-2.5 text-sm font-medium text-black hover:bg-black/5'>
+              <a
+                href={`tel:${PHONE}`}
+                className='flex items-center justify-center gap-2 rounded-full border border-black/15 py-2.5 text-sm font-medium text-black hover:bg-black/5'
+              >
                 <MdWifiCalling3 /> Call Now
               </a>
             </div>

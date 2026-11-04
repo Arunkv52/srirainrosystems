@@ -1,4 +1,4 @@
-import { Link } from "react-router"
+import { Link } from 'react-router'
 import Logo from '../assets/logo.png'
 
 /* ---------- Edit these ---------- */
@@ -22,6 +22,7 @@ const menu = [
   { label: 'Domestic RO', link: '/domesticro' },
   { label: 'Commercial RO', link: '/commercialro' },
   { label: 'Industrial RO', link: '/industrialro' },
+  { label: 'Water Softeners', link: '/watersofteners' },
   { label: 'Spares & Service', link: '/sparesandservices' },
   { label: 'About Us', link: '/about' },
   { label: 'Knowledge Hub', link: '/knowledgehub' },
@@ -143,12 +144,13 @@ export default function Footer () {
             <ul className='space-y-2'>
               {menu.map(m => (
                 <li key={m.link}>
-                  
-                  <Link to={m.link} className='text-base font-normal transition-colors hover:text-cyan-300 ${linkFocus}'>
+                  <Link
+                    to={m.link}
+                    className='text-base font-normal transition-colors hover:text-cyan-300 ${linkFocus}'
+                  >
                     {m.label}
-                </Link>
+                  </Link>
                 </li>
-                
               ))}
             </ul>
           </nav>
@@ -165,10 +167,7 @@ export default function Footer () {
                       : {})}
                     className={`inline-flex items-center gap-3 text-base font-normal transition-colors hover:text-cyan-300 ${linkFocus}`}
                   >
-                    <Icon
-                      paths={c.paths}
-                      className='h-4.5 w-4.5 shrink-0'
-                    />
+                    <Icon paths={c.paths} className='h-4.5 w-4.5 shrink-0' />
                     {c.label}
                   </a>
                 </li>
