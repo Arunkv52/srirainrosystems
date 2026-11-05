@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import IndustryImg from '../../../assets/Products/Industrial/WhatsApp Image 2026-10-10 at 16.49.30.jpeg'
 import Img1 from '../../../assets/Products/Rain water filteration/Image-1.jpg'
 import Img2 from '../../../assets/Products/Rain water filteration/image-2.jpg'
@@ -6,13 +7,12 @@ import Img4 from '../../../assets/Products/Rain water filteration/image-4.jpg'
 import Img5 from '../../../assets/Products/Rain water filteration/image-5.jpg'
 import Img6 from '../../../assets/Products/Rain water filteration/image-6.jpg'
 
-
 /* =========================================================
    1. YOUR DATA  (edit this part)
    ========================================================= */
-const BRAND = "Sri Rain RO Systems";
-const PHONE_HREF = "tel:+919999999999";
-const WHATSAPP_NUMBER = "919999999999"; // country code + number, no "+"
+const BRAND = 'Sri Rain RO Systems'
+const PHONE_HREF = 'tel:+919942499000'
+const WHATSAPP_NUMBER = '+919942499000' // country code + number, no "+"
 
 // Photos: import each one at the top of the file, then set it here, e.g.
 //   import PlantImg from "../assets/industrial/ro-plant.jpg";
@@ -455,13 +455,13 @@ function PlantOverview() {
             </ul>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href={quoteHref("Industrial RO")}
+               <Link
+            to={'/contact'}
                 className="inline-flex items-center gap-2 rounded-full bg-(--primary) px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-(--primary)/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2"
               >
-                Request a quotation
+                Get a Quote
                 <Icon d={ARROW} className="h-4 w-4" />
-              </a>
+              </Link>
               <a
                 href={PHONE_HREF}
                 className="rounded-full border border-(--primary)/25 px-7 py-3 text-sm font-semibold text-(--primary) transition-colors hover:border-(--primary) hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
@@ -591,13 +591,13 @@ function ProcessAndSpecs() {
               requirement and permeate quality are determined from raw-water
               analysis and your application requirements.
             </p>
-            <a
-              href={quoteHref("Industrial RO")}
+             <Link
+            to={'/contact'}
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-white/90 px-7 py-3.5 text-sm font-semibold text-(--primary) transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
             >
               Technical consultation
               <Icon d={ARROW} className="h-4 w-4" />
-            </a>
+            </Link>
           </div>
 
           <div className="lg:col-span-8">
@@ -721,24 +721,7 @@ function Rainwater() {
                     ))}
                   </ul>
 
-                  <div className="mt-auto flex flex-wrap items-center gap-3 pt-7">
-                    <a
-                      href={quoteHref("Rainwater harvesting filter", m.name)}
-                      className="inline-flex items-center gap-2 rounded-full bg-(--primary) px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-(--primary)/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2"
-                    >
-                      Get a quote
-                      <Icon d={ARROW} className="h-4 w-4" />
-                    </a>
-                    <a
-                      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi, I'd like details on the ${m.name}.`)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`WhatsApp about the ${m.name}`}
-                      className="grid h-11 w-11 place-items-center rounded-full border border-(--primary)/25 text-(--primary) transition-colors hover:border-(--primary) hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
-                    >
-                      <Icon d={CHAT} className="h-5 w-5" />
-                    </a>
-                  </div>
+                  
                 </div>
               </article>
             </li>
@@ -846,24 +829,7 @@ function Dispensers() {
                     ))}
                   </ul>
 
-                  <div className="mt-auto flex flex-wrap items-center gap-3 pt-7">
-                    <a
-                      href={quoteHref("Water dispenser", c.name)}
-                      className="inline-flex items-center gap-2 rounded-full bg-(--primary) px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-(--primary)/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2"
-                    >
-                      Get a quote
-                      <Icon d={ARROW} className="h-4 w-4" />
-                    </a>
-                    <a
-                      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi, I'd like details on the ${c.name}.`)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`WhatsApp about the ${c.name}`}
-                      className="grid h-11 w-11 place-items-center rounded-full border border-(--primary)/25 text-(--primary) transition-colors hover:border-(--primary) hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
-                    >
-                      <Icon d={CHAT} className="h-5 w-5" />
-                    </a>
-                  </div>
+                  
                 </div>
               </article>
             </li>
@@ -932,13 +898,13 @@ function CtaBand() {
             </div>
 
             <div className="flex flex-wrap items-center gap-2">
-              <a
-                href={quoteHref("Industrial RO")}
+               <Link
+            to={'/contact'}
                 className="inline-flex items-center gap-2 rounded-full bg-white/90 px-7 py-3.5 text-sm font-semibold text-(--primary) transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
               >
                 Request a Quote
                 <Icon d={ARROW} className="h-4 w-4" />
-              </a>
+              </Link>
               <a
                 href={PHONE_HREF}
                 className="rounded-full px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"

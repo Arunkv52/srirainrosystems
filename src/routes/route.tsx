@@ -8,6 +8,8 @@ import CommercialRoPage from "../pages/Commercialro"
 import Domesticro from "../pages/Domesticro"
 import Industrialro from "../pages/Industrialro"
 import WaterSofteners from "../pages/WaterSofteners"
+import TermsPage from "../pages/Termspage"
+import PrivacyPolicyPage from "../pages/Privacypolicypage"
 
 
 
@@ -24,6 +26,8 @@ const route = () => {
             <Route path="/domesticro" element={<Domesticro />} />
             <Route path='/industrialro' element={<Industrialro/>} />
             <Route path="/watersofteners" element={<WaterSofteners />} />
+            <Route path="/termsandconditions" element={<TermsPage/>} />
+            <Route path="/privacypolicy" element={<PrivacyPolicyPage/>} />
         </Routes>
    </BrowserRouter>
   )

@@ -1,7 +1,10 @@
+import { Link } from "react-router";
+
+
 /* =========================================================
    1. YOUR DATA  (edit this part)
    ========================================================= */
-const PHONE_HREF = "tel:+919999999999";
+const PHONE_HREF = "tel:+919942499000";
 
 type Service = {
   slug: string; // used in the enquiry link
@@ -85,9 +88,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
   const number = String(index + 1).padStart(2, "0"); // 1 -> "01"
 
   return (
-    <a
-      href={`/contact?service=${service.slug}#service`}
-      className="group relative flex h-full flex-col rounded-xs border border-slate-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-xl hover:shadow-cyan-900/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 sm:p-7"
+    <div className="group relative flex h-full flex-col rounded-xs border border-slate-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-xl hover:shadow-cyan-900/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 sm:p-7"
     >
       {/* Icon on the left, number on the right */}
       <div className="flex items-start justify-between">
@@ -106,14 +107,8 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
         {service.description}
       </p>
 
-      <span className="mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-semibold text-(--primary) group-hover:text-cyan-700">
-        Enquire
-        <Icon
-          d={ARROW}
-          className="h-4 w-4 transition-transform group-hover:translate-x-1"
-        />
-      </span>
-    </a>
+      
+    </div>
   );
 }
 
@@ -150,20 +145,20 @@ export default function ServiceMaintenance() {
               </p>
 
               <div className="relative mt-8 flex flex-wrap gap-3">
-                <a
-                  href="/contact#service"
+                <Link to={'/contact'}
+                  
                   className="inline-flex items-center gap-2 rounded-full bg-(--light-green) px-6 py-3 text-sm font-semibold text-[#06242a] transition-colors hover:bg-cyan-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                 >
-                  Book a service
+                  Get a Quote
                   <Icon d={ARROW} className="h-4 w-4" />
-                </a>
-                <a
-                  href={PHONE_HREF}
+                </Link>
+                <Link to={PHONE_HREF}
+                  
                   className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
                 >
                   <Icon d={PHONE} className="h-4 w-4" />
                   Call now
-                </a>
+                </Link>
               </div>
             </div>
           </div>

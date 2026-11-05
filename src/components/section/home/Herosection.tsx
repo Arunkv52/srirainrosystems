@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react'
 import Video from '../../../assets/home/gemini-generate-video.mp4'
 import ButtonFill from '../../ui/ButtonFill'
-import ButtonOutline from '../../ui/ButtonOutline'
 
 const Herosection = () => {
   const sectionRef = useRef<HTMLElement>(null)
@@ -75,7 +74,6 @@ const Herosection = () => {
 
             {/* Buttons */}
             <div className='py-4 flex justify-start items-center gap-5'>
-              <ButtonOutline text={'Explore Products'} link={'/'}/>
               <ButtonFill text={'Get a Quote'} link={'/contact'} />
             </div>
           </div>

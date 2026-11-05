@@ -1,10 +1,12 @@
+import { Link } from 'react-router'
 import AbtImg from '../../../assets/about/happy-young-couple.jpg'
-
 /* =========================================================
    1. YOUR DATA  (edit this part)
    ========================================================= */
+
+
 const BRAND = 'Sri Rain RO Systems'
-const PHONE_HREF = 'tel:+919999999999'
+const PHONE_HREF = 'tel:+919942499000'
 
 /* ---- About section (your company description) ---- */
 const aboutParagraphs = [
@@ -151,30 +153,7 @@ const commitment = [
   'We continue to work towards a future where every customer can make an informed choice about water purification with confidence.'
 ]
 
-/* ---- Testimonials: SAMPLE TEXT, replace with real customer reviews ---- */
-const testimonials = [
-  {
-    name: 'Customer name',
-    role: 'Home owner',
-    quote:
-      'Replace this with a real review from a customer about their installation and service experience.',
-    rating: 5
-  },
-  {
-    name: 'Customer name',
-    role: 'Restaurant owner',
-    quote:
-      'Replace this with a real review from a commercial customer about how the system and support worked for them.',
-    rating: 5
-  },
-  {
-    name: 'Customer name',
-    role: 'Factory manager',
-    quote:
-      'Replace this with a real review from an industrial customer about plant maintenance and response time.',
-    rating: 5
-  }
-]
+
 
 /* =========================================================
    2. SMALL HELPERS
@@ -619,69 +598,8 @@ function WhyChoose () {
   )
 }
 
-/* =========================================================
-   10. SECTION: CUSTOMER TESTIMONIALS
-   ========================================================= */
-function Testimonials () {
-  return (
-    <section
-      aria-labelledby='testimonials-title'
-      className='bg-slate-50 py-20 sm:py-28'
-    >
-      <div className={wrap}>
-        <div className='mx-auto max-w-2xl text-center'>
-          <div className='flex justify-center'>
-            <Eyebrow>Testimonials</Eyebrow>
-          </div>
-          <h2
-            id='testimonials-title'
-            className='mt-4 text-3xl font-semibold tracking-tight text-(--primary) sm:text-4xl'
-          >
-            What our customers say
-          </h2>
-          <p className='mt-4 text-base leading-relaxed text-slate-600'>
-            Feedback from homes, businesses and plants we look after.
-          </p>
-        </div>
 
-        <ul className='mt-14 grid gap-6 lg:grid-cols-3'>
-          {testimonials.map((t, i) => (
-            <li key={i}>
-              <figure className='relative flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-900/10 sm:p-8'>
-                <span
-                  className='absolute right-6 top-2 text-8xl font-serif leading-none text-cyan-300/50'
-                  aria-hidden='true'
-                >
-                  &ldquo;
-                </span>
 
-                <Stars count={t.rating} />
-
-                <blockquote className='mt-5 flex-1 text-base leading-relaxed text-slate-700'>
-                  {t.quote}
-                </blockquote>
-
-                <figcaption className='mt-7 flex items-center gap-3 border-t border-slate-200 pt-5'>
-                  <span className='grid h-11 w-11 place-items-center rounded-full bg-(--primary) text-sm font-semibold text-white'>
-                    {t.name.charAt(0)}
-                  </span>
-                  <span>
-                    <span className='block text-sm font-semibold text-(--primary)'>
-                      {t.name}
-                    </span>
-                    <span className='block text-sm text-slate-500'>
-                      {t.role}
-                    </span>
-                  </span>
-                </figcaption>
-              </figure>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
-  )
-}
 
 /* =========================================================
    11. SECTION: CALL TO ACTION
@@ -716,12 +634,12 @@ function CtaBand () {
             </div>
 
             <div className='flex flex-wrap items-center gap-2'>
-              <a
-                href='/contact#quote'
+             <Link
+            to={'/contact'}
                 className='inline-flex items-center gap-2 rounded-full bg-white/90 px-7 py-3.5 text-sm font-semibold text-(--primary) transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300'
               >
                 Get a quote
-              </a>
+              </Link>
               <a
                 href={PHONE_HREF}
                 className='rounded-full px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300'
@@ -749,7 +667,7 @@ export default function AboutPage () {
       <Services />
       <Process />
       <WhyChoose />
-      <Testimonials />
+     
       <CtaBand />
     </main>
   )

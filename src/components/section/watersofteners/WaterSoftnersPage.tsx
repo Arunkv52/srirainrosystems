@@ -3,14 +3,15 @@ import Image1 from '../../../assets/Products/Water Softener/image-1.jpg'
 import Image2 from '../../../assets/Products/Water Softener/image-2.jpg'
 import Image3 from '../../../assets/Products/Water Softener/image-3.jpg'
 import Image4 from '../../../assets/Products/Water Softener/image-4.jpg'
+import { Link } from 'react-router'
 
 
 /* =========================================================
    1. YOUR DATA  (edit this part)
    ========================================================= */
 const BRAND = 'Sri Rain RO Systems'
-const PHONE_HREF = 'tel:+919999999999'
-const WHATSAPP_NUMBER = '919999999999' // country code + number, no "+"
+const PHONE_HREF = 'tel:+919942499000'
+const WHATSAPP_NUMBER = '+919942499000' // country code + number, no "+"
 
 // Photos: import each one at the top of the file, then set it here, e.g.
 //   import SoftenerImg from "../assets/softeners/softener.jpg";
@@ -636,13 +637,13 @@ function Solutions () {
             </dl>
 
             <div className='mt-7 flex flex-wrap items-center gap-3'>
-              <a
-                href={quoteHref(t.name)}
+               <Link
+            to={'/contact'}
                 className='inline-flex items-center gap-2 rounded-full bg-(--primary) px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-(--primary)/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2'
               >
                 Request a quote
                 <Icon d={ARROW} className='h-4 w-4' />
-              </a>
+              </Link>
               <a
                 href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
                   `Hi, I'd like details on the ${t.name}.`
@@ -804,13 +805,13 @@ function CommonSpecs () {
               The main parameters that apply to all our water softener models.
               Final values depend on your feed-water analysis and the design.
             </p>
-            <a
-              href={quoteHref()}
+             <Link
+            to={'/contact'}
               className='mt-6 inline-flex items-center gap-2 rounded-full bg-(--primary) px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-(--primary)/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2'
             >
               Ask about your water
               <Icon d={ARROW} className='h-4 w-4' />
-            </a>
+            </Link>
           </div>
 
           <div className='lg:col-span-8'>
@@ -889,13 +890,13 @@ function NeedsAndCta () {
             </div>
 
             <div className='flex flex-wrap items-center gap-2'>
-              <a
-                href={quoteHref()}
+               <Link
+            to={'/contact'}
                 className='inline-flex items-center gap-2 rounded-full bg-white/90 px-7 py-3.5 text-sm font-semibold text-(--primary) transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300'
               >
                 Request a quote
                 <Icon d={ARROW} className='h-4 w-4' />
-              </a>
+              </Link>
               <a
                 href={PHONE_HREF}
                 className='rounded-full px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300'

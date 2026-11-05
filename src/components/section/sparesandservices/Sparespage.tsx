@@ -6,16 +6,16 @@ import TubeFittings from '../../../assets/Spares-and-services/tubes-fittings.jpg
 import Valves from '../../../assets/Spares-and-services/valves.jpg'
 import WaterSoftener from '../../../assets/Spares-and-services/water-softener.jpg'
 import Electric from '../../../assets/Spares-and-services/industrial-water-pump.jpg'
-
+import { Link } from 'react-router'
 
 
 
 /* =========================================================
    1. YOUR DATA  (edit this part)
    ========================================================= */
-const BRAND = "Sri Rain RO Systems";
-const PHONE_HREF = "tel:+919999999999";
-const WHATSAPP_NUMBER = "919999999999"; // country code + number, no "+"
+const BRAND = 'Sri Rain RO Systems'
+const PHONE_HREF = 'tel:+919942499000'
+const WHATSAPP_NUMBER = '+919942499000' // country code + number, no "+"
 
 type Segment = "Domestic" | "Commercial" | "Industrial";
 
@@ -269,13 +269,13 @@ function Hero() {
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">
-          <a
-            href="/contact?topic=Spares%20%26%20accessories#quote"
+           <Link
+            to={'/contact'}
             className="inline-flex items-center gap-2 rounded-full bg-white/90 px-7 py-3.5 text-sm font-semibold text-(--primary) transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
           >
-            Request a quote
+            Get a Quote
             <Icon d={ARROW} className="h-4 w-4" />
-          </a>
+          </Link>
           <a
             href="#browse"
             className="rounded-full border border-white/25 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
@@ -438,26 +438,7 @@ function CategorySection({
               </dl>
             </div>
 
-            <div className="mt-7 flex flex-wrap items-center gap-3">
-              <a
-                href={enquiryHref(c)}
-                className="inline-flex items-center gap-2 rounded-full bg-(--primary) px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-(--primary)/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2"
-              >
-                Enquire about this
-                <Icon d={ARROW} className="h-4 w-4" />
-              </a>
-              <a
-                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-                  `Hi, I need details on: ${c.name}`
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-(--primary)/25 px-6 py-3 text-sm font-semibold text-(--primary) transition-colors hover:border-(--primary) hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
-              >
-                <Icon d={CHAT} className="h-4 w-4" />
-                WhatsApp
-              </a>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -552,13 +533,13 @@ function BulkBand() {
             </div>
 
             <div className="flex flex-wrap items-center gap-2">
-              <a
-                href="/contact?topic=Bulk%20order#quote"
+               <Link
+            to={'/contact'}
                 className="inline-flex items-center gap-2 rounded-full bg-white/90 px-7 py-3.5 text-sm font-semibold text-(--primary) transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
               >
                 Bulk enquiry
                 <Icon d={ARROW} className="h-4 w-4" />
-              </a>
+              </Link>
               <a
                 href={PHONE_HREF}
                 className="rounded-full px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"

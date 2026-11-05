@@ -11,7 +11,7 @@ import WaterSoftenersImg from '../assets/navbar/water-softener.jpeg'
 import Logo from '../assets/logo.png'
 
 /* ---------- Edit these ---------- */
-const PHONE = '+919999999999' // Replace with your phone number.
+const PHONE = '+919942499000' // Replace with your phone number.
 const WHATSAPP = PHONE.replace(/\D/g, '') // derived: digits only, no "+"
 const WHATSAPP_TEXT = "Hi, I'd like to know more about your RO systems."
 

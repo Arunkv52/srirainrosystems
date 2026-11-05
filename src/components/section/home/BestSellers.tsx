@@ -2,7 +2,7 @@ import DomesticImg from "../../../assets/home/domestic-ro.jpg";
 import CommercialImg from "../../../assets/home/interior-crop.jpg";
 import IndustryImg from "../../../assets/home/industry-ro.jpg";
 import WaterSoftenersImg from "../../../assets/home/water-softeners.jpg";
-
+import { Link } from "react-router";
 
 /* ---------- Types ---------- */
 type Badge = "New launch" | "Popular choice" | "Best value";
@@ -26,7 +26,7 @@ const products: Product[] = [
     badge: 'Popular choice',
     image: DomesticImg,
     features: ['RO', 'UV', 'MF', '8 L tank'],
-    href: '/domestic-ro/home-ro-8l'
+    href: '/domesticro'
   },
   
   {
@@ -36,7 +36,7 @@ const products: Product[] = [
     badge: 'Popular choice',
     image: CommercialImg,
     features: ['50 LPH', 'SS frame', 'Auto flush'],
-    href: '/commercial-ro/commercial-50'
+    href: '/commercialro'
   },
   {
     id: 'industrial-250',
@@ -45,7 +45,7 @@ const products: Product[] = [
     badge: 'Popular choice',
     image: IndustryImg,
     features: ['250 LPH', 'Pre-treatment', 'AMC ready'],
-    href: '/industrial-ro/industrial-250'
+    href: '/industrialro'
   },
   {
     id: 'wall-mount-7l',
@@ -54,7 +54,7 @@ const products: Product[] = [
     badge: 'Popular choice',
     image: WaterSoftenersImg,
     features: ['Homes', 'offices', 'shops', 'schools', 'hospitals and factories'],
-    href: '/domestic-ro/wall-mount-7l'
+    href: '/watersofteners'
   },
 ]
 
@@ -156,13 +156,13 @@ function ProductCard({ product }: { product: Product }) {
         {/* Actions pinned to the bottom so every card lines up */}
         <div className="mt-auto grid grid-cols-2 gap-2.5 border-t border-slate-100 pt-5">
           
-          <a
-            href={`/contact?product=${encodeURIComponent(id)}#demo`}
+          <Link to={href}
+            
             className="inline-flex items-center justify-center rounded-full bg-(--primary) px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-(--primary)/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2"
           >
              Get a info
             <ArrowRight className="h-3.5 w-3.5" />
-          </a>
+          </Link>
         </div>
       </div>
     </article>

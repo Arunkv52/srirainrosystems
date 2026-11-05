@@ -5,8 +5,7 @@ import Logo from '../assets/logo.png'
 const BRAND = 'Sri Rain Ro Systems'
 const INTRO = 'RO water purification for homes, businesses and industry.'
 const ADDRESS = ['12, Industrial Estate Road Coimbatore,', 'Tamil Nadu, India']
-const PHONE = '+91 99999 99999'
-const PHONE_HREF = 'tel:+919999999999'
+const PHONE = '+91 99424 99000,+91 97158 86000,+91 97912 87666'
 
 const ICONS = {
   drop: 'M12 2.5s6 6.2 6 10.5a6 6 0 1 1-12 0C6 8.7 12 2.5 12 2.5z',
@@ -32,21 +31,21 @@ const menu = [
 // Contact + social column
 const connect = [
   {
-    label: 'Contact us',
-    href: '/contact',
+    label: 'sales@srirainrosystems.com',
+    href: 'mailto:sales@srirainrosystems.com',
     paths: [ICONS.mail],
     external: false
   },
-  { label: PHONE, href: PHONE_HREF, paths: [ICONS.phone], external: false },
+  { label: PHONE, paths: [ICONS.phone], external: false },
   {
     label: 'WhatsApp',
-    href: 'https://wa.me/919999999999',
+    href: 'https://wa.me/+919942499000',
     paths: [ICONS.chat],
     external: true
   },
   {
     label: 'LinkedIn',
-    href: 'https://linkedin.com/',
+    href: 'https://www.linkedin.com/company/sri-rain-ro-system/',
     paths: [
       'M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z',
       'M2 9h4v12H2z',
@@ -55,17 +54,16 @@ const connect = [
     external: true
   },
   {
-    label: 'YouTube',
-    href: 'https://youtube.com/',
+    label: 'Facebook',
+    href: 'https://www.facebook.com/people/Sri-Rain-Ro/61554829674440/',
     paths: [
-      'M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z',
-      'M9.75 15.02L15.5 11.75 9.75 8.48z'
+      'M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.017 1.792-4.687 4.533-4.687 1.312 0 2.686.235 2.686.235v2.953h-1.513c-1.49 0-1.955.93-1.955 1.885v2.274h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z'
     ],
     external: true
   },
   {
     label: 'Instagram',
-    href: 'https://instagram.com/',
+    href: 'https://www.instagram.com/sri_rain_ro_systems/',
     paths: [
       'M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z',
       'M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z',
@@ -76,8 +74,8 @@ const connect = [
 ]
 
 const legal = [
-  { label: 'Privacy policy', href: '/privacy-policy' },
-  { label: 'Terms & conditions', href: '/terms' }
+  { label: 'Privacy policy', href: '/privacypolicy' },
+  { label: 'Terms & conditions', href: '/termsandconditions' }
 ]
 
 function Icon ({

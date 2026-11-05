@@ -9,6 +9,7 @@ import LivepurImg from '../../../assets/Products/Domestic/Livpure/WhatsApp Image
 import MerlinImg from '../../../assets/Products/Domestic/Merlin/I speed/WhatsApp Image 2026-09-03 at 13.24.54.jpeg'
 import OrcaImg from '../../../assets/Products/Domestic/Orca/WhatsApp Image 2026-09-03 at 12.54.22.jpeg'
 import Aquav5Img from '../../../assets/Products/Domestic/V5/WhatsApp Image 2026-09-03 at 12.56.16.jpeg'
+import { Link } from 'react-router'
 
 
 
@@ -16,8 +17,8 @@ import Aquav5Img from '../../../assets/Products/Domestic/V5/WhatsApp Image 2026-
    1. YOUR DATA  (edit this part)
    ========================================================= */
 const BRAND = 'Sri Rain RO Systems'
-const PHONE_HREF = 'tel:+919999999999'
-const WHATSAPP_NUMBER = '919999999999' // country code + number, no "+"
+const PHONE_HREF = 'tel:+919942499000'
+const WHATSAPP_NUMBER = '+919942499000' // country code + number, no "+"
 
 type Spec = { label: string; value: string }
 type SpecGroup = { title: string; rows: Spec[] }
@@ -743,12 +744,12 @@ function Hero () {
         </p>
 
         <div className='mt-8 flex flex-wrap gap-3'>
-          <a
-            href='#models'
+          <Link
+            to={'/contact'}
             className='inline-flex items-center gap-2 rounded-full bg-white/90 px-7 py-3.5 text-sm font-semibold text-(--primary) transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300'
           >
             Get a quote
-          </a>
+          </Link>
         </div>
       </div>
     </section>
@@ -1057,13 +1058,14 @@ function Details ({
             </p>
 
             <div className='mt-7 flex flex-wrap items-center gap-3'>
-              <a
-                href={quoteHref(m)}
+              <Link
+            to={'/contact'}
+
                 className='inline-flex items-center gap-2 rounded-full bg-(--primary) px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-(--primary)/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2'
               >
                 Request a quote
                 <Icon d={ARROW} className='h-4 w-4' />
-              </a>
+              </Link>
               <a
                 href={whatsappHref(m)}
                 target='_blank'
@@ -1290,13 +1292,14 @@ function CtaBand () {
             </div>
 
             <div className='flex flex-wrap items-center gap-2'>
-              <a
-                href='/contact?topic=Domestic%20RO#quote'
+               <Link
+            to={'/contact'}
+
                 className='inline-flex items-center gap-2 rounded-full bg-white/90 px-7 py-3.5 text-sm font-semibold text-(--primary) transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300'
               >
                 Talk to our team
                 <Icon d={ARROW} className='h-4 w-4' />
-              </a>
+              </Link>
               <a
                 href={PHONE_HREF}
                 className='rounded-full px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300'
