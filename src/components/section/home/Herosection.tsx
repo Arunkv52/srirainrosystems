@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import Video from '../../../assets/home/gemini-generate-video.mp4'
-import ButtonFill from '../../ui/ButtonFill'
+import { Link } from 'react-router'
 
 const Herosection = () => {
   const sectionRef = useRef<HTMLElement>(null)
@@ -45,6 +45,26 @@ const Herosection = () => {
       window.removeEventListener('resize', updateVideo)
     }
   }, [])
+/* =========================================================
+   2. SMALL ICON HELPER
+   ========================================================= */
+function Icon({ d, className = "h-6 w-6" }: { d: string; className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.6}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d={d} />
+    </svg>
+  );
+}
+  const ARROW = "M5 12h14M13 6l6 6-6 6";
 
   return (
     <section
@@ -74,7 +94,13 @@ const Herosection = () => {
 
             {/* Buttons */}
             <div className='py-4 flex justify-start items-center gap-5'>
-              <ButtonFill text={'Get a Quote'} link={'/contact'} />
+              <Link to={'/contact'}
+                  
+                  className="inline-flex items-center gap-2 rounded-full bg-(--light-green) px-6 py-3 text-sm font-semibold text-[#06242a] transition-colors hover:bg-cyan-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                >
+                  Get a Quote
+                  <Icon d={ARROW} className="h-4 w-4" />
+                </Link>
             </div>
           </div>
         </div>
