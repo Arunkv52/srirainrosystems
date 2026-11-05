@@ -329,8 +329,8 @@ const sections: LegalSection[] = [
           Phone: <A href={LEGAL.phoneHref}>{LEGAL.phone}</A>
           <br />
           Email: <A href={`mailto:${LEGAL.email}`}>{LEGAL.email}</A>
-          <br />
-          Grievance contact: {LEGAL.grievanceOfficer}
+         
+         
         </P>
       </>
     )

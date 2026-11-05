@@ -179,27 +179,7 @@ function Icon ({ d, className = 'h-6 w-6' }: { d: string; className?: string }) 
   )
 }
 
-function Stars ({ count }: { count: number }) {
-  return (
-    <div
-      className='flex gap-1 text-amber-400'
-      role='img'
-      aria-label={`${count} out of 5 stars`}
-    >
-      {Array.from({ length: 5 }).map((_, i) => (
-        <svg
-          key={i}
-          viewBox='0 0 24 24'
-          className={`h-5 w-5 ${i < count ? '' : 'text-slate-200'}`}
-          fill='currentColor'
-          aria-hidden='true'
-        >
-          <path d='M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z' />
-        </svg>
-      ))}
-    </div>
-  )
-}
+
 
 // Small label above titles on light sections
 function Eyebrow ({ children }: { children: string }) {

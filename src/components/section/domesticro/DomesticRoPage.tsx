@@ -646,10 +646,7 @@ function Eyebrow ({ children }: { children: string }) {
   )
 }
 
-const quoteHref = (m: Model) =>
-  `/contact?topic=${encodeURIComponent(
-    'Domestic RO'
-  )}&product=${encodeURIComponent(m.name)}#quote`
+
 
 const whatsappHref = (m: Model) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(

@@ -269,10 +269,6 @@ function Eyebrow ({ children }: { children: string }) {
   )
 }
 
-const quoteHref = (p: Product) =>
-  `/contact?topic=${encodeURIComponent(
-    'Commercial RO'
-  )}&product=${encodeURIComponent(p.name)}#quote`
 
 const whatsappHref = (p: Product) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
@@ -391,7 +387,7 @@ function Hero () {
 //             <li key={p.slug}>
 //               <article className="group flex h-full flex-col overflow-hidden rounded-xs border border-slate-200 bg-white transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-xl hover:shadow-cyan-900/10">
 //                 <div className="relative">
-//                   <ProductImage product={p} className="aspect-[16/10]" />
+//                   <ProductImage product={p} className="aspect-16/10" />
 //                   <span className="absolute left-5 top-5 rounded-full bg-white/90 px-3.5 py-1 text-xs font-semibold text-(--primary) backdrop-blur">
 //                     {p.badge}
 //                   </span>

@@ -12,7 +12,7 @@ import Img6 from '../../../assets/Products/Rain water filteration/image-6.jpg'
    ========================================================= */
 const BRAND = 'Sri Rain RO Systems'
 const PHONE_HREF = 'tel:+919942499000'
-const WHATSAPP_NUMBER = '+919942499000' // country code + number, no "+"
+
 
 // Photos: import each one at the top of the file, then set it here, e.g.
 //   import PlantImg from "../assets/industrial/ro-plant.jpg";
@@ -264,7 +264,6 @@ const dispenserApplications = ["Homes", "Offices", "Shops", "Schools", "Hospital
 const wrap = "px-5 md:px-8";
 const DROP = "M12 2.5s6 6.2 6 10.5a6 6 0 1 1-12 0C6 8.7 12 2.5 12 2.5z";
 const ARROW = "M5 12h14M13 6l6 6-6 6";
-const CHAT = "M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8L4 20z";
 const CHECK = "M5 12.5l4.5 4.5L19 7.5";
 
 function Icon({ d, className = "h-6 w-6" }: { d: string; className?: string }) {
@@ -293,8 +292,7 @@ function Eyebrow({ children }: { children: string }) {
   );
 }
 
-const quoteHref = (topic: string, product?: string) =>
-  `/contact?topic=${encodeURIComponent(topic)}${product ? `&product=${encodeURIComponent(product)}` : ""}#quote`;
+
 
 // Datasheet card: dark header, then label / value rows
 function Datasheet({ title, tag, rows }: { title: string; tag: string; rows: Spec[] }) {

@@ -225,10 +225,7 @@ function Eyebrow({ children }: { children: string }) {
   );
 }
 
-const enquiryHref = (c: Category) =>
-  `/contact?topic=${encodeURIComponent("Spares & accessories")}&product=${encodeURIComponent(
-    c.name
-  )}#quote`;
+
 
 /* =========================================================
    3. SECTION: HERO

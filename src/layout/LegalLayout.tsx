@@ -112,7 +112,7 @@ function Toc ({
   )
 }
 
-export default function LegalLayout ({ title, intro, sections, other }: Props) {
+export default function LegalLayout ({ title, intro, sections}: Props) {
   const [active, setActive] = useState(sections[0]?.id ?? '')
 
   // Highlight the section you are reading in the "On this page" list

@@ -100,7 +100,7 @@ function ArrowRight({ className = "h-4 w-4" }: { className?: string }) {
 }
 
 function ProductCard({ product }: { product: Product }) {
-  const { id, name, category, badge, image, features, href } = product;
+  const {  name, category, badge, image, features, href } = product;
 
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-xl hover:shadow-cyan-900/10">
