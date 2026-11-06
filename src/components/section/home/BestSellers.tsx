@@ -1,7 +1,7 @@
-import DomesticImg from "../../../assets/home/domestic-ro.jpg";
-import CommercialImg from "../../../assets/home/interior-crop.jpg";
-import IndustryImg from "../../../assets/home/industry-ro.jpg";
-import WaterSoftenersImg from "../../../assets/home/water-softeners.jpg";
+import DomesticImg from "../../../assets/Products/Domestic/home-img.jpeg";
+import CommercialImg from "../../../assets/Products/Commercial/main-bg.jpeg";
+import IndustryImg from "../../../assets/Products/Industrial/industry-img.jpeg";
+import WaterSoftenersImg from "../../../assets/Products/Water Softener/water-softener-img.jpeg";
 import { Link } from "react-router";
 
 /* ---------- Types ---------- */

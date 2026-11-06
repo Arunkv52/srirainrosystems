@@ -4,7 +4,7 @@ import Logo from '../assets/logo.png'
 /* ---------- Edit these ---------- */
 const BRAND = 'Sri Rain Ro Systems'
 const INTRO = 'RO water purification for homes, businesses and industry.'
-const ADDRESS = ['12, Industrial Estate Road Coimbatore,', 'Tamil Nadu, India']
+const ADDRESS = ['No.595/3c. HP Bank, Kongu Main Road', 'Bharathi Nagar (North), Tirupur - 641 603', 'Tamil Nadu, India']
 const PHONE = '+91 99424 99000,+91 97158 86000,+91 97912 87666'
 
 const ICONS = {
