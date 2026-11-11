@@ -1,3 +1,4 @@
+import Footer from '../layout/Footer'
 import LegalLayout, { A, LEGAL, P, UL } from '../layout/LegalLayout'
 import type { LegalSection } from '../layout/LegalLayout'
 import Navbar from '../layout/Navbar'
@@ -378,6 +379,7 @@ export default function TermsPage () {
         sections={sections}
         other={{ label: 'Privacy Policy', href: '/privacy-policy' }}
       />
+      <Footer />
     </>
   )
 }

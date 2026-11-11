@@ -71,6 +71,7 @@ const enquiryTypes = [
   'Domestic RO',
   'Commercial RO',
   'Industrial RO',
+  'Water softener',
   'Spares & accessories',
   'Installation & commissioning',
   'Repair & troubleshooting',

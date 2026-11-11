@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import Image1 from '../../../assets/Products/Water Softener/image-1.jpg'
-import Image2 from '../../../assets/Products/Water Softener/image-2.jpg'
-import Image3 from '../../../assets/Products/Water Softener/image-3.jpg'
-import Image4 from '../../../assets/Products/Water Softener/image-4.jpg'
+import Image2 from '../../../assets/Products/Water Softener/image-2.jpeg'
+import Image3 from '../../../assets/Products/Water Softener/image-3.jpeg'
+import Image4 from '../../../assets/Products/Water Softener/image-4.jpeg'
 import { Link } from 'react-router'
 
 
