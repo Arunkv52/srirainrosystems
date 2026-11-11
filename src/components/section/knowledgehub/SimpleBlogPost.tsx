@@ -72,7 +72,7 @@ export default function SimpleBlogPost () {
 
         <h2>Which one should you choose?</h2>
         <div className='overflow-x-auto rounded-2xl border border-slate-200'>
-          <table className='w-full min-w-[480px] text-left text-base'>
+          <table className='w-full min-w-120 text-left text-base'>
             <thead className='bg-(--primary) text-white'>
               <tr>
                 <th className='px-5 py-3 font-semibold'>Your water</th>
@@ -109,7 +109,7 @@ export default function SimpleBlogPost () {
         </ul>
 
         {/* Help box */}
-        <div className='!mt-12 rounded-2xl bg-slate-50 p-7'>
+        <div className='mt-12! rounded-2xl bg-slate-50 p-7'>
           <p className='text-xl font-semibold text-(--primary)'>
             Not sure which purifier suits your water?
           </p>

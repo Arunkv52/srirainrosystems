@@ -113,7 +113,7 @@ const formatDate = (iso: string) =>
 function Cover ({ post, className = '' }: { post: Post; className?: string }) {
   return (
     <div
-      className={`relative overflow-hidden bg-gradient-to-br from-(--blue) to-(--primary) ${className}`}
+      className={`relative overflow-hidden bg-linear-to-br from-(--blue) to-(--primary) ${className}`}
     >
       {post.image ? (
         <img
@@ -205,12 +205,12 @@ function Hero () {
   return (
     <section
       aria-labelledby='blog-title'
-      className='about-hero overflow-hidden bg-gradient-to-br from-(--blue) to-(--primary) pb-16 pt-16 text-white sm:pb-24 sm:pt-44'
+      className='about-hero overflow-hidden bg-linear-to-br from-(--blue) to-(--primary) pb-16 pt-16 text-white sm:pb-24 sm:pt-44'
     >
       <svg
         viewBox='0 0 24 24'
         fill='currentColor'
-        className='pointer-events-none absolute -bottom-24 right-0 -z-10 h-[28rem] w-[28rem] text-cyan-300/10 sm:right-20'
+        className='pointer-events-none absolute -bottom-24 right-0 -z-10 h-112 w-md text-cyan-300/10 sm:right-20'
         aria-hidden='true'
       >
         <path d={ICONS.drop} />
@@ -260,7 +260,7 @@ function Hero () {
 function PostCard ({ post }: { post: Post }) {
   return (
     <article className='group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-xl hover:shadow-cyan-900/10'>
-      <Cover post={post} className='aspect-[16/10]' />
+      <Cover post={post} className='aspect-16/10' />
 
       <div className='flex flex-1 flex-col p-6'>
         <Meta post={post} />

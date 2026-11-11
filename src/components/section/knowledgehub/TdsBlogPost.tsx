@@ -80,7 +80,7 @@ export default function TdsBlogPost () {
           only where no better source is available. As a rough guide to taste:
         </p>
         <div className='overflow-x-auto rounded-2xl border border-slate-200'>
-          <table className='w-full min-w-[480px] text-left text-base'>
+          <table className='w-full min-w-120 text-left text-base'>
             <thead className='bg-(--primary) text-white'>
               <tr>
                 <th className='px-5 py-3 font-semibold'>TDS (mg/L)</th>
@@ -146,7 +146,7 @@ export default function TdsBlogPost () {
         </ul>
 
         {/* Help box */}
-        <div className='!mt-12 rounded-2xl bg-slate-50 p-7'>
+        <div className='mt-12! rounded-2xl bg-slate-50 p-7'>
           <p className='text-xl font-semibold text-(--primary)'>
             Not sure what your TDS reading means for you?
           </p>
