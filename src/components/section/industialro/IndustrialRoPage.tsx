@@ -6,10 +6,10 @@ import Img3 from '../../../assets/Products/Rain water filteration/image-3.jpeg'
 import Img4 from '../../../assets/Products/Water Dispensers/bottle-type.jpeg'
 import Img5 from '../../../assets/Products/Water Dispensers/domestic-1.webp'
 import Img6 from '../../../assets/Products/Water Dispensers/commercial.webp'
-import Img7 from '../../../assets/products/lph/200-lph.jpeg'
-import Img8 from '../../../assets/products/lph/1000-lph.jpeg'
-import Img9 from '../../../assets/products/lph/2000-lph.jpeg'
-import Img10 from '../../../assets/products/lph/10000-lph.jpeg'
+import Img7 from '../../../assets/Products/industry-lph/200-lph.jpeg'
+import Img8 from '../../../assets/Products/industry-lph/1000-lph.jpeg'
+import Img9 from '../../../assets/Products/industry-lph/2000-lph.jpeg'
+import Img10 from '../../../assets/Products/industry-lph/10000-lph.jpeg'
 
 
 /* =========================================================
