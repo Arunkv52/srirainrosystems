@@ -1,6 +1,8 @@
 import { useMemo, useState } from 'react'
 import type { ChangeEvent } from 'react'
 import { Link } from 'react-router'
+import Image1 from '../../../assets/Products/Domestic/Era/images-3.jpeg'
+import Image2 from '../../../assets/blog/tds-machine.jpg'
 
 /* =========================================================
    1. YOUR DATA  (edit this part)
@@ -51,7 +53,8 @@ const posts: Post[] = [
     category: 'Buying guides',
     date: '2026-10-15',
     readMinutes: 5,
-    link: '/SimpleBlogPost'
+    link: '/SimpleBlogPost',
+    image: Image1
   },
   {
     slug: 'tds-reading-meaning',
@@ -61,7 +64,8 @@ const posts: Post[] = [
     category: 'RO basics',
     date: '2026-10-08',
     readMinutes: 4,
-    link: '/tdsreading'
+    link: '/tdsreading',
+    image: Image2
   },
   
 ]
@@ -69,7 +73,7 @@ const posts: Post[] = [
 /* =========================================================
    2. SMALL HELPERS
    ========================================================= */
-const wrap = 'mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12'
+const wrap = 'px-5 sm:px-8 md:px-8'
 
 const ICONS = {
   search: 'M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM20 20l-4-4',

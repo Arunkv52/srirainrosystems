@@ -1,8 +1,10 @@
 // A simple blog post: one file, no extra layout needed.
 // To write a new post, copy this file and change the text.
 
+import { Link } from "react-router"
 import Footer from "../../../layout/Footer"
 import Navbar from "../../../layout/Navbar"
+
 
 const TITLE = 'RO, UV and UF: which water purifier is right for your home?'
 const CATEGORY = 'Buying guides'
@@ -16,9 +18,9 @@ export default function SimpleBlogPost () {
       {/* Title area */}
       <header className='bg-linear-to-br from-(--blue) to-(--primary) px-5 pb-12 pt-36 text-white md:px-8 sm:pt-44'>
         <div className='mx-auto max-w-3xl'>
-          <a href='/knowledgehub' className='text-sm text-white/70 hover:text-white'>
+          <Link to='/knowledgehub' className='text-sm text-white/70 hover:text-white'>
             &larr; Knowledge Hub
-          </a>
+          </Link>
           <p className='mt-6 text-sm font-semibold uppercase tracking-widest text-cyan-300'>
             {CATEGORY}
           </p>
