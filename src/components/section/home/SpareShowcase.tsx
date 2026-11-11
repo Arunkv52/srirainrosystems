@@ -15,8 +15,8 @@ import Fittings from '../../../assets/Spares-and-services/home/fittings.jpg'
 /* =========================================================
    1. YOUR DATA  (edit this part)
    ========================================================= */
-const WHATSAPP_NUMBER = '919999999999' // country code + number, no "+"
-const PHONE_HREF = 'tel:+919999999999'
+const WHATSAPP_NUMBER = '+919715886000' // country code + number, no "+"
+const PHONE_HREF = 'tel:+919715886000'
 
 // Opens WhatsApp with a ready-made bulk order message
 const BULK_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(

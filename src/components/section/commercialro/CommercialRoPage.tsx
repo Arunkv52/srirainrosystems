@@ -6,8 +6,8 @@ import Ro50Img from '../../../assets/Products/Commercial/50 LPH/WhatsApp Image 2
    1. YOUR DATA  (edit this part)
    ========================================================= */
 const BRAND = 'Sri Rain RO Systems'
-const PHONE_HREF = 'tel:+919942499000'
-const WHATSAPP_NUMBER = '+919942499000' // country code + number, no "+"
+const PHONE_HREF = 'tel:+919715886000'
+const WHATSAPP_NUMBER = '+919715886000' // country code + number, digits only
 
 type Spec = { parameter: string; value: string }
 

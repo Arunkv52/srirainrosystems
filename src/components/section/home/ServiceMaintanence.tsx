@@ -4,7 +4,7 @@ import { Link } from "react-router";
 /* =========================================================
    1. YOUR DATA  (edit this part)
    ========================================================= */
-const PHONE_HREF = "tel:+919942499000";
+const PHONE_HREF = "tel:+919715886000";
 
 type Service = {
   slug: string; // used in the enquiry link

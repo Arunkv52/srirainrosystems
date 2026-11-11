@@ -10,6 +10,8 @@ import Industrialro from "../pages/Industrialro"
 import WaterSofteners from "../pages/WaterSofteners"
 import TermsPage from "../pages/Termspage"
 import PrivacyPolicyPage from "../pages/Privacypolicypage"
+import SimpleBlogPost from "../components/section/knowledgehub/SimpleBlogPost"
+import TdsBlogPost from "../components/section/knowledgehub/TdsBlogPost"
 
 
 
@@ -28,6 +30,8 @@ const route = () => {
             <Route path="/watersofteners" element={<WaterSofteners />} />
             <Route path="/termsandconditions" element={<TermsPage/>} />
             <Route path="/privacypolicy" element={<PrivacyPolicyPage/>} />
+            <Route path="/SimpleBlogPost" element={<SimpleBlogPost />} />
+            <Route path="/tdsreading" element ={<TdsBlogPost/>} />
         </Routes>
    </BrowserRouter>
   )

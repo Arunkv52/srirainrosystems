@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import Video from '../../../assets/home/Final-video.mp4'
+import Video from '../../../assets/home/main-video.mp4'
 import { Link } from 'react-router'
 
 const Herosection = () => {

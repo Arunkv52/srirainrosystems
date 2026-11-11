@@ -3,15 +3,21 @@ import IndustryImg from '../../../assets/Products/Industrial/WhatsApp Image 2026
 import Img1 from '../../../assets/Products/Rain water filteration/Image-1.jpeg'
 import Img2 from '../../../assets/Products/Rain water filteration/image-2.jpeg'
 import Img3 from '../../../assets/Products/Rain water filteration/image-3.jpeg'
-import Img4 from '../../../assets/Products/Rain water filteration/image-4.jpg'
-import Img5 from '../../../assets/Products/Rain water filteration/image-5.jpg'
-import Img6 from '../../../assets/Products/Rain water filteration/image-6.jpg'
+import Img4 from '../../../assets/Products/Water Dispensers/bottle-type.jpeg'
+import Img5 from '../../../assets/Products/Water Dispensers/domestic-1.webp'
+import Img6 from '../../../assets/Products/Water Dispensers/commercial.webp'
+
+import Img7 from '../../../assets/products/lph/200-lph.jpeg'
+import Img8 from '../../../assets/products/lph/1000-lph.jpeg'
+import Img9 from '../../../assets/products/lph/2000-lph.jpeg'
+import Img10 from '../../../assets/products/lph/10000-lph.jpeg'
+
 
 /* =========================================================
    1. YOUR DATA  (edit this part)
    ========================================================= */
 const BRAND = 'Sri Rain RO Systems'
-const PHONE_HREF = 'tel:+919942499000'
+const PHONE_HREF = 'tel:+919715886000'
 
 
 // Photos: import each one at the top of the file, then set it here, e.g.
@@ -33,10 +39,10 @@ const plantChecklist = [
 ];
 
 const capacityBands = [
-  { range: "250–500", unit: "LPH", text: "Small industrial units, laboratories and light commercial applications." },
-  { range: "1,000", unit: "LPH", text: "Factories, hotels, institutions and small manufacturing plants." },
-  { range: "2,000–5,000", unit: "LPH", text: "Textile units, process-water supply and medium-sized industries." },
-  { range: "10,000–50,000+", unit: "LPH", text: "Large manufacturing facilities and high-volume process-water applications." },
+  { range: "250–500", unit: "LPH", text: "Small industrial units, laboratories and light commercial applications.", img : Img7 },
+  { range: "1,000", unit: "LPH", text: "Factories, hotels, institutions and small manufacturing plants.", img : Img8 },
+  { range: "2,000–5,000", unit: "LPH", text: "Textile units, process-water supply and medium-sized industries.", img : Img9 },
+  { range: "10,000–50,000+", unit: "LPH", text: "Large manufacturing facilities and high-volume process-water applications.", img : Img10 },
 ];
 
 const features = [
@@ -483,7 +489,6 @@ function PlantOverview() {
    ========================================================= */
 function Capacity() {
   // Bar heights only show that capacity steps up. They are not to scale.
-  const barHeights = ["h-12", "h-20", "h-28", "h-40"];
 
   return (
     <section aria-labelledby="capacity-title" className="bg-slate-50 py-20 sm:py-28">
@@ -505,17 +510,18 @@ function Capacity() {
         </div>
 
         <ol className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {capacityBands.map((b, i) => (
+          {capacityBands.map((b) => (
             <li
               key={b.range}
               className="group flex flex-col rounded-xs border border-slate-200 bg-white p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-xl hover:shadow-cyan-900/10"
             >
               {/* Rising bar */}
-              <div className="flex h-44 items-end" aria-hidden="true">
+              {/* <div className="flex h-44 items-end" aria-hidden="true">
                 <div
                   className={`w-full rounded-t-xl bg-linear-to-t from-(--primary) to-cyan-400 transition-all duration-500 group-hover:opacity-90 ${barHeights[i]}`}
                 />
-              </div>
+              </div> */}
+              <img src={b.img} alt="" />
               <p className="mt-5 text-3xl font-semibold leading-none text-(--primary)">
                 {b.range}
                 <span className="ml-1.5 text-base font-medium text-cyan-700">{b.unit}</span>

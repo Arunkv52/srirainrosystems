@@ -14,8 +14,8 @@ import { Link } from 'react-router'
    1. YOUR DATA  (edit this part)
    ========================================================= */
 const BRAND = 'Sri Rain RO Systems'
-const PHONE_HREF = 'tel:+919942499000'
-const WHATSAPP_NUMBER = '+919942499000' // country code + number, no "+"
+const PHONE_HREF = 'tel:+919715886000'
+const WHATSAPP_NUMBER = '+919715886000' // country code + number, no "+"
 
 type Segment = "Domestic" | "Commercial" | "Industrial";
 

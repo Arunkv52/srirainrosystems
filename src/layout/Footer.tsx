@@ -4,11 +4,34 @@ import Logo from '../assets/logo.png'
 /* ---------- Edit these ---------- */
 const BRAND = 'Sri Rain Ro Systems'
 const INTRO = 'RO water purification for homes, businesses and industry.'
-const ADDRESS = ['No.595/3c. HP Bank, Kongu Main Road', 'Bharathi Nagar (North), Tirupur - 641 603', 'Tamil Nadu, India']
+
+// Each location shows its name as a heading, with the address below it
+const LOCATIONS = [
+  {
+    name: 'Tirupur',
+    address: [
+      'No.595/3c. HP Bank, Kongu Main Road, Bharathi Nagar (North),',
+      ' Tirupur - 641 603, Tamil Nadu'
+    ]
+  },
+  {
+    name: 'Pollachi',
+    address: [
+      'No.10, Kmr Streeet, Venkatesa Colony',
+      'Pollachi - 642 001, Tamil Nadu'
+    ]
+  },
+  {
+    name: 'Avinashi',
+    address: ['No.13, Seyur Road, Soolai', 'Avinashi - 641 654, Tamil Nadu']
+  }
+]
+
 const PHONE = '+91 99424 99000,+91 97158 86000,+91 97912 87666'
 
 const ICONS = {
   drop: 'M12 2.5s6 6.2 6 10.5a6 6 0 1 1-12 0C6 8.7 12 2.5 12 2.5z',
+  pin: 'M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11zM12 7.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z',
   mail: 'M3 5h18v14H3zM3 7l9 7 9-7',
   phone:
     'M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z',
@@ -39,7 +62,7 @@ const connect = [
   { label: PHONE, paths: [ICONS.phone], external: false },
   {
     label: 'WhatsApp',
-    href: 'https://wa.me/+919942499000',
+    href: 'https://wa.me/+919715886000',
     paths: [ICONS.chat],
     external: true
   },
@@ -125,16 +148,27 @@ export default function Footer () {
 
         {/* Main row */}
         <div className='mt-16 md:grid grid md:grid-cols-[4fr_1fr_1fr] grid-cols-1 md:gap-14 gap-8 md:mt-2'>
-          {/* Company info */}
+          {/* Company info and locations */}
           <div className='text-[15px] leading-relaxed'>
             <p>{INTRO}</p>
-            <address className='mt-6 not-italic text-white/90'>
-              {ADDRESS.map(line => (
-                <span key={line} className='block'>
-                  {line}
-                </span>
+
+            <div className='mt-6 grid gap-6 sm:grid-cols-2 xl:grid-cols-3'>
+              {LOCATIONS.map(loc => (
+                <div key={loc.name}>
+                  <h3 className='flex items-center gap-2 text-base font-semibold text-cyan-300'>
+                    <Icon paths={[ICONS.pin]} className='h-4.5 w-4.5 shrink-0' />
+                    {loc.name}
+                  </h3>
+                  <address className='mt-2 not-italic text-white/90'>
+                    {loc.address.map(line => (
+                      <span key={line} className='block'>
+                        {line}
+                      </span>
+                    ))}
+                  </address>
+                </div>
               ))}
-            </address>
+            </div>
           </div>
 
           {/* Menu */}
@@ -144,7 +178,7 @@ export default function Footer () {
                 <li key={m.link}>
                   <Link
                     to={m.link}
-                    className='text-base font-normal transition-colors hover:text-cyan-300 ${linkFocus}'
+                    className={`text-base font-normal transition-colors hover:text-cyan-300 ${linkFocus}`}
                   >
                     {m.label}
                   </Link>

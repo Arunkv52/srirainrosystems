@@ -1,15 +1,16 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router'
 import Aqua2090Img from '../../../assets/Products/Domestic/Aqua 2090/Images-1.jpeg'
-import AquaEraImg from '../../../assets/Products/Domestic/Era/Charcoal black.jpeg'
-import AquaFonixImg from '../../../assets/Products/Domestic/Fonix/WhatsApp Image 2026-09-03 at 12.54.15 (1).jpeg'
-import GseriesImg from '../../../assets/Products/Domestic/G series/WhatsApp Image 2026-09-03 at 13.24.51.jpeg'
-import HeiloImg from '../../../assets/Products/Domestic/Hielo/WhatsApp Image 2026-09-03 at 13.08.23 (1).jpeg'
-import InnovicaImg from '../../../assets/Products/Domestic/Innovica/WhatsApp Image 2026-09-03 at 13.07.15.jpeg'
-import LivepurImg from '../../../assets/Products/Domestic/Livpure/WhatsApp Image 2026-09-03 at 13.27.41.jpeg'
+import AquaEraImg from '../../../assets/Products/Domestic/Era/images-1.jpeg'
+import AquaFonixImg from '../../../assets/Products/Domestic/Fonix/WhatsApp Image 2026-09-03 at 12.54.17.jpeg'
+import GseriesImg from '../../../assets/Products/Domestic/G series/images-1.jpeg'
+import HeiloImg from '../../../assets/Products/Domestic/Hielo/WhatsApp Image 2026-09-03 at 13.08.23.jpeg'
+import InnovicaImg from '../../../assets/Products/Domestic/Innovica/images-1.jpeg'
+import LivepurImg from '../../../assets/Products/Domestic/Livpure/images-1.jpeg'
 import MerlinImg from '../../../assets/Products/Domestic/Merlin/I speed/WhatsApp Image 2026-09-03 at 13.24.54.jpeg'
 import OrcaImg from '../../../assets/Products/Domestic/Orca/WhatsApp Image 2026-09-03 at 12.54.22.jpeg'
-import Aquav5Img from '../../../assets/Products/Domestic/V5/WhatsApp Image 2026-09-03 at 12.56.16.jpeg'
+import Aquav5Img from '../../../assets/Products/Domestic/V5/images-1.jpeg'
+import KleverImg from '../../../assets/Products/Domestic/klever/images-1.jpeg'
 
 /* =========================================================
    0. GALLERY IMAGES (automatic)
@@ -34,8 +35,8 @@ const imagesFromFolder = (folder?: string): string[] =>
    1. YOUR DATA  (edit this part)
    ========================================================= */
 const BRAND = 'Sri Rain RO Systems'
-const PHONE_HREF = 'tel:+919942499000'
-const WHATSAPP_NUMBER = '919942499000' // country code + number, digits only
+const PHONE_HREF = 'tel:+919715886000'
+const WHATSAPP_NUMBER = '+919715886000' // country code + number, digits only
 
 type Spec = { label: string; value: string }
 type SpecGroup = { title: string; rows: Spec[] }
@@ -473,7 +474,42 @@ const models: Model[] = [
         ]
       }
     ]
-  }
+  },
+  {
+    slug: 'klever',
+    name: 'Klever',
+    tagline: '5–7 stage purification with mineral options',
+    tags: ['UV', 'UF', 'TDS control', 'Alkaline / mineral', 'Copper'],
+    facts: {
+      technology: 'RO + UV / UF, depending on variant',
+      capacity: '10–15 LPH',
+      storage: '10 L',
+      maxTds: 'Up to 2,000 ppm (listed variants)',
+      installation: 'Wall-mounted / countertop'
+    },
+    image: KleverImg,
+    folder: 'klever',
+    specGroups: [
+      {
+        title: 'Technical specifications',
+        rows: [
+          { label: 'Model', value: 'Klever' },
+          { label: 'Product type', value: 'Domestic RO water purifier' },
+          { label: 'Purification technology', value: 'RO + UV / UF, depending on variant' },
+          { label: 'Filtration stages', value: '5–7 stages, depending on variant' },
+          { label: 'Purification capacity', value: '10 to 15 LPH' },
+          { label: 'Storage tank', value: '10 litres' },
+          { label: 'Maximum feed-water TDS', value: 'Up to 2,000 ppm for listed variants' },
+          { label: 'Membrane', value: '100 GPD, on some variants' },
+          { label: 'Mineral enhancement', value: 'TDS controller / mineral / copper / alkaline options' },
+          { label: 'Cabinet', value: 'Food-grade ABS plastic' },
+          { label: 'Installation', value: 'Wall-mounted / countertop' },
+          { label: 'Automatic operation', value: 'Auto-start and auto-shutoff on supported variants' },
+          { label: 'Application', value: 'Homes and small offices' }
+        ]
+      }
+    ]
+  },
 ]
 
 // Plain-language guide to the technology names used above
