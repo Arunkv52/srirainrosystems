@@ -11,8 +11,8 @@ const BRAND = 'Sri Rain Ro Systems'
 // Main company contact (shown in the top cards)
 const business = {
   phone: '+91 99424 99000,+91 97158 86000,+91 97912 87666',
-  phoneHref: 'tel:+919942499000',
-  whatsapp: '+919942499000', // country code + number, no "+"
+  phoneHref: 'tel:+919715886000',
+  whatsapp: '+919715886000', // country code + number, no "+"
   email: 'sales@srirainrosystems.com',
   hours: 'Mon – Sat, 9:00 am – 6:30 pm'
 }

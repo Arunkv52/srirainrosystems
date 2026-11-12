@@ -7,7 +7,7 @@ import GseriesImg from '../../../assets/Products/Domestic/G series/images-1.jpeg
 import HeiloImg from '../../../assets/Products/Domestic/Hielo/WhatsApp Image 2026-09-03 at 13.08.23.jpeg'
 import InnovicaImg from '../../../assets/Products/Domestic/Innovica/images-1.jpeg'
 import LivepurImg from '../../../assets/Products/Domestic/Livpure/images-1.jpeg'
-import MerlinImg from '../../../assets/Products/Domestic/Merlin/I speed/WhatsApp Image 2026-09-03 at 13.24.54.jpeg'
+import MerlinImg from '../../../assets/Products/Domestic/Merlin/Matrix/Matrix-1.jpeg'
 import OrcaImg from '../../../assets/Products/Domestic/Orca/WhatsApp Image 2026-09-03 at 12.54.22.jpeg'
 import Aquav5Img from '../../../assets/Products/Domestic/V5/images-1.jpeg'
 import KleverImg from '../../../assets/Products/Domestic/klever/images-1.jpeg'
